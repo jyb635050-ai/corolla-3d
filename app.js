@@ -37,6 +37,9 @@ const I18N = {
     scopeParts: '零件数', scopeMass: '质量小计', scopeCost: '成本小计', scopeTime: '工时小计',
     scopeBack: '← 回到整车', scopeHint: '这一组的小计。点组里的零件看单件明细。',
     scopeHeaviest: '组里最重的 5 个',
+    cmpAdd: '加入对比', cmpDrop: '移出对比', cmpOpen: '对比 {n} 件', cmpClear: '清空',
+    cmpTitle: '零件横向对比', cmpHint: '同一口径下并排看。加号从零件面板或树里点。',
+    cmpFull: '最多同时对比 3 件',
     aggDisasmNote: '工时 = Σ(每种紧固件的单件拆卸耗时 × 数量) + 装配层级 × 通达系数。层级代表要先拆掉几层才够得着它。焊接件按破坏性拆解处理，不计工时。',
     basis: { category_typical: '品类经验值', sum_of_children: '子件之和', official: '官方数据',
              parametric_model: '参数化模型' },
@@ -94,6 +97,9 @@ const I18N = {
     scopeParts: 'Parts', scopeMass: 'Mass subtotal', scopeCost: 'Cost subtotal', scopeTime: 'Time subtotal',
     scopeBack: '← Back to vehicle', scopeHint: 'Subtotals for this group. Click a part in it for the part detail.',
     scopeHeaviest: 'Heaviest 5 in this group',
+    cmpAdd: 'Add to compare', cmpDrop: 'Remove', cmpOpen: 'Compare {n}', cmpClear: 'Clear',
+    cmpTitle: 'Part comparison', cmpHint: 'Side by side on the same basis. Add from a part panel or the tree.',
+    cmpFull: 'Up to 3 parts at a time',
     aggDisasmNote: 'Time = sum(per-fastener removal time x count) + assembly level x access factor. The level says how many layers must come off before you can reach it. Welded parts are destructive-removal only and carry no time.',
     basis: { category_typical: 'category typical', sum_of_children: 'sum of children', official: 'official',
              parametric_model: 'parametric model' },
@@ -180,7 +186,9 @@ const S = {
   byId: new Map(),
   car: null,
   selected: null,
-  scope: null,      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
+  scope: null,
+  compare: [],       // 横向对比的零件 id，最多 3 个
+  compareOpen: false,      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
   anim: null,
   camAnim: null,
   frames: [],
@@ -611,6 +619,84 @@ function renderScope() {
   return h;
 }
 
+// 零件横向对比：基准工具最核心的动作。所有值都用和单件面板完全相同的口径，
+// 不另算一套 —— 两处对不上是最容易失去信任的地方。
+const CMP_ROWS = [
+  ['kPn',       (p) => p.oem_pn || '—'],
+  ['kSub',      (p, L) => (S.lang === 'zh' ? p.subgroup_zh : p.subgroup_en) || '—'],
+  ['kQty',      (p, L) => (p.qty_kind === 'approx' ? '≈ ' : '') + p.qty + ' ' + L.unit],
+  ['kMaterial', (p) => (VOCAB.material[p.material] || ['—', '—'])[S.lang === 'zh' ? 0 : 1]],
+  ['kProcess',  (p) => (VOCAB.process[p.process] || ['—', '—'])[S.lang === 'zh' ? 0 : 1]],
+  ['kWeight',   (p) => fmtMass(p.weight_g)],
+  ['kCost',     (p) => '¥' + (p.cost_cny || 0).toFixed(2)],
+  ['kDisasm',   (p, L) => (p.disassembly_kind === 'destructive'
+                   ? L.disasmKind.destructive : (p.disassembly_min || 0).toFixed(1) + ' min')],
+  ['kDepth',    (p) => String(p.tree_depth == null ? '—' : p.tree_depth)],
+  ['kFasten',   (p, L) => (p.fastening || []).map((f) =>
+                   ((VOCAB.fasten[f.type] || [f.type, f.type])[S.lang === 'zh' ? 0 : 1])
+                   + (f.count > 1 ? '×' + f.count : '')).join('，') || '—'],
+  ['kSup',      (p) => String((p.suppliers || []).length)],
+];
+
+function renderCompare() {
+  const L = t();
+  const list = S.compare.map((id) => S.byId.get(id)).filter(Boolean);
+  if (!list.length) return '';
+  let h = `<div class="agg">`;
+  h += `<button type="button" class="pill mini" id="cmpBack">${esc(L.scopeBack)}</button>`;
+  h += `<h2 class="p-name">${esc(L.cmpTitle)}</h2>`;
+  h += `<p class="p-alt">${esc(L.cmpHint)}</p>`;
+  h += `<div class="cmp-wrap"><table class="cmp"><thead><tr><th></th>`;
+  for (const p of list) {
+    h += `<th><span class="cmp-h" data-goto="${esc(p.id)}">${esc(partName(p).main)}</span>`
+      + `<button type="button" class="cmp-x" data-drop="${esc(p.id)}">×</button></th>`;
+  }
+  h += `</tr></thead><tbody>`;
+  for (const [key, fn] of CMP_ROWS) {
+    h += `<tr><th>${esc(L[key])}</th>`;
+    for (const p of list) h += `<td class="mono">${esc(String(fn(p, L)))}</td>`;
+    h += `</tr>`;
+  }
+  h += `</tbody></table></div>`;
+  h += `<button type="button" class="pill mini" id="cmpClear">${esc(L.cmpClear)}</button></div>`;
+  return h;
+}
+
+function renderCompareTray() {
+  const L = t();
+  if (!S.compare.length) return '';
+  let h = `<div class="cmp-tray">`;
+  for (const id of S.compare) {
+    const p = S.byId.get(id);
+    if (p) h += `<span class="chip flat">${esc(partName(p).main)}<button type="button" class="cmp-x" data-drop="${esc(id)}">×</button></span>`;
+  }
+  if (S.compare.length >= 2) {
+    h += `<button type="button" class="pill mini primary" id="cmpOpen">`
+      + esc(L.cmpOpen.replace('{n}', S.compare.length)) + `</button>`;
+  }
+  h += `</div>`;
+  return h;
+}
+
+function bindCompare(root) {
+  root.querySelectorAll('[data-drop]').forEach((n) => n.addEventListener('click', (e) => {
+    e.stopPropagation();
+    S.compare = S.compare.filter((x) => x !== n.getAttribute('data-drop'));
+    if (S.compare.length < 2) S.compareOpen = false;
+    renderPanel();
+  }));
+  const o = root.querySelector('#cmpOpen');
+  if (o) o.addEventListener('click', () => { S.compareOpen = true; S.selected = null; S.scope = null; clearHighlight(); renderPanel(); });
+  const c = root.querySelector('#cmpClear');
+  if (c) c.addEventListener('click', () => { S.compare = []; S.compareOpen = false; renderPanel(); });
+  const bk = root.querySelector('#cmpBack');
+  if (bk) bk.addEventListener('click', () => { S.compareOpen = false; renderPanel(); });
+  root.querySelectorAll('[data-goto]').forEach((n) => {
+    n.style.cursor = 'pointer';
+    n.addEventListener('click', () => selectPart(n.getAttribute('data-goto'), true));
+  });
+}
+
 function renderPanel() {
   const body = el('panelBody');
   const empty = el('panelEmpty');
@@ -619,7 +705,10 @@ function renderPanel() {
     // 没选中零件时，右栏给整车层面的汇总，而不是一句「还没有选中零件」。
     // 质量分布 / 材料构成 / 紧固件合计 —— 这是拆解基准工具真正的看点。
     body.hidden = true; empty.hidden = false; body.innerHTML = '';
-    empty.innerHTML = S.scope ? renderScope() : renderAggregate();
+    empty.innerHTML = (S.compareOpen && S.compare.length >= 2)
+      ? renderCompare()
+      : (S.scope ? renderScope() : renderAggregate()) + renderCompareTray();
+    bindCompare(empty);
     const bk = el('scopeBack');
     if (bk) bk.addEventListener('click', () => { S.scope = null; renderPanel(); });
     empty.querySelectorAll('[data-goto]').forEach((n) => {
@@ -688,6 +777,11 @@ function renderPanel() {
     h += `</div></div>`;
   }
 
+  {
+    const inCmp = S.compare.includes(p.id);
+    h += `<div class="p-sec"><button type="button" class="pill mini${inCmp ? '' : ' primary'}" `
+      + `id="cmpToggle">${esc(inCmp ? L.cmpDrop : L.cmpAdd)}</button></div>`;
+  }
   const conn = (p.connects_to || []).filter((c) => S.byId.has(c));
   if (conn.length) {
     h += `<div class="p-sec"><h4>${esc(L.kConn)}</h4><div class="chips">`;
@@ -715,6 +809,19 @@ function renderPanel() {
   }
 
   body.innerHTML = h;
+  {
+    const tg = el('cmpToggle');
+    if (tg) tg.addEventListener('click', () => {
+      const id = S.selected;
+      if (S.compare.includes(id)) S.compare = S.compare.filter((x) => x !== id);
+      else if (S.compare.length >= 3) { toast(t().cmpFull); return; }
+      else S.compare.push(id);
+      renderPanel();
+    });
+    const tray = document.createElement('div');
+    tray.innerHTML = renderCompareTray();
+    if (tray.firstChild) { body.appendChild(tray.firstChild); bindCompare(body); }
+  }
   body.querySelectorAll('[data-goto]').forEach((b) => {
     b.addEventListener('click', () => selectPart(b.getAttribute('data-goto'), true));
   });

@@ -318,3 +318,18 @@ table.sup td:last-child, table.sup th:last-child { padding-right: 0; }
 #tip.toast { transform: translateX(-50%); max-width: 420px; white-space: normal; text-align: center; }
 .tree-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; }
 .pill.mini { padding: 3px 9px; font-size: 10.5px; border-radius: 7px; }
+
+/* 零件横向对比 */
+.cmp-wrap { overflow-x: auto; margin: 10px 0; }
+table.cmp { width: 100%; border-collapse: collapse; font-size: 12px; }
+table.cmp th, table.cmp td { padding: 6px 8px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid rgba(128,128,128,.14); }
+table.cmp thead th { font-size: 12px; font-weight: 600; white-space: normal; }
+table.cmp tbody th { font-weight: 500; opacity: .6; white-space: nowrap; width: 88px; }
+table.cmp td { font-size: 11.5px; }
+.cmp-h { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+.cmp-x { margin-left: 5px; border: 0; background: transparent; cursor: pointer;
+  color: inherit; opacity: .45; font-size: 13px; line-height: 1; padding: 0 2px; }
+.cmp-x:hover { opacity: 1; }
+.cmp-tray { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(128,128,128,.16); }
