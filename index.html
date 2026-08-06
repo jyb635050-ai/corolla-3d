@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>卡罗拉整车分解 · Corolla Exploded View</title>
+<!-- 空 favicon：不留一条 /favicon.ico 的 404 在控制台里 -->
+<link rel="icon" href="data:,">
+
+<link rel="stylesheet" href="style.css">
+<!-- three.js 全部走本地 vendor/，运行时不碰任何 CDN -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/build/three.module.js",
+    "three/addons/": "./vendor/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="app" data-lang="zh">
+
+  <header id="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="titles">
+        <b data-i18n="title">卡罗拉 整车分解</b>
+        <i data-i18n="subtitle">点开任意零件，看懂它叫什么、干什么</i>
+      </span>
+      <span id="dataBadge" class="badge" hidden></span>
+    </div>
+    <div class="tools">
+      <div id="langSwitch" class="seg" role="group" aria-label="language">
+        <!-- 按钮文字也要跟着语言换：英文模式下写「中文」就等于界面里留了汉字 -->
+        <button type="button" data-lang-btn="zh" data-i18n="langZh" class="on">中文</button>
+        <button type="button" data-lang-btn="en" data-i18n="langEn">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="stage">
+      <canvas id="view"></canvas>
+
+      <div id="loading"><span class="spin"></span><em data-i18n="loading">正在装配…</em></div>
+
+      <div id="hud">
+        <button type="button" id="btnTree" class="pill" data-i18n="treeBtn">零件树</button>
+        <button type="button" id="btnExplode" class="pill primary" data-i18n="explode">爆炸展开</button>
+        <button type="button" id="btnReset" class="pill" data-i18n="resetView">回正视角</button>
+      </div>
+
+      <!-- 零件树：434 条里有 209 条没建 3D，只能从这里进 -->
+      <aside id="tree" hidden>
+        <div class="tree-head">
+          <input id="treeSearch" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="搜零件名或零件号">
+          <div id="treeTags" class="chips tight"></div>
+          <div class="tree-foot">
+            <span id="treeCount" class="tree-count"></span>
+            <button type="button" id="btnExport" class="pill mini" data-i18n="exportBtn">导出 BOM</button>
+          </div>
+        </div>
+        <div id="treeBody" class="tree-body"></div>
+      </aside>
+
+      <div id="hint" data-i18n="hint">拖动旋转 · 滚轮缩放 · 单击零件</div>
+      <div id="tip" hidden></div>
+    </section>
+
+    <aside id="panel">
+      <div id="panelEmpty">
+        <div class="emptyMark" aria-hidden="true"></div>
+        <p data-i18n="emptyTitle">还没有选中零件</p>
+        <small data-i18n="emptyHint">在左边的车上单击任意一个零件，这里就会告诉你它是什么。</small>
+      </div>
+      <article id="panelBody" hidden></article>
+    </aside>
+  </main>
+
+  <footer id="footnote">
+    <span data-i18n="disclaimer"></span>
+  </footer>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
