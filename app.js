@@ -34,6 +34,9 @@ const I18N = {
     kCost: '成本估算', kDisasm: '拆解工时', kDepth: '装配层级',
     disasmKind: { removable: '可无损拆卸', destructive: '焊接，不可无损拆卸' },
     aggDisasm: '可拆性', aggDisasmTotal: '可拆件工时合计',
+    scopeParts: '零件数', scopeMass: '质量小计', scopeCost: '成本小计', scopeTime: '工时小计',
+    scopeBack: '← 回到整车', scopeHint: '这一组的小计。点组里的零件看单件明细。',
+    scopeHeaviest: '组里最重的 5 个',
     aggDisasmNote: '工时 = Σ(每种紧固件的单件拆卸耗时 × 数量) + 装配层级 × 通达系数。层级代表要先拆掉几层才够得着它。焊接件按破坏性拆解处理，不计工时。',
     basis: { category_typical: '品类经验值', sum_of_children: '子件之和', official: '官方数据',
              parametric_model: '参数化模型' },
@@ -88,6 +91,9 @@ const I18N = {
     kCost: 'Cost estimate', kDisasm: 'Removal time', kDepth: 'Assembly level',
     disasmKind: { removable: 'Non-destructively removable', destructive: 'Welded, not removable without cutting' },
     aggDisasm: 'Removability', aggDisasmTotal: 'Removal time, removable parts',
+    scopeParts: 'Parts', scopeMass: 'Mass subtotal', scopeCost: 'Cost subtotal', scopeTime: 'Time subtotal',
+    scopeBack: '← Back to vehicle', scopeHint: 'Subtotals for this group. Click a part in it for the part detail.',
+    scopeHeaviest: 'Heaviest 5 in this group',
     aggDisasmNote: 'Time = sum(per-fastener removal time x count) + assembly level x access factor. The level says how many layers must come off before you can reach it. Welded parts are destructive-removal only and carry no time.',
     basis: { category_typical: 'category typical', sum_of_children: 'sum of children', official: 'official',
              parametric_model: 'parametric model' },
@@ -174,6 +180,7 @@ const S = {
   byId: new Map(),
   car: null,
   selected: null,
+  scope: null,      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
   anim: null,
   camAnim: null,
   frames: [],
@@ -439,7 +446,12 @@ function bindTree() {
     if (!gn) return;
     const k = gn.getAttribute('data-tg');
     if (TREE.open.has(k)) TREE.open.delete(k); else TREE.open.add(k);
-    renderTree();
+    // 展开的同时把右栏切到这一组的小计 —— 这就是「钻取」
+    const seg = k.split('::');
+    S.selected = null;
+    S.scope = seg.length > 1 ? { group: seg[0], subgroup: seg[1] } : { group: seg[0] };
+    clearHighlight();
+    renderTree(); renderPanel();
   });
 }
 
@@ -532,6 +544,73 @@ function renderAggregate() {
   return h;
 }
 
+// 钻取：某个部分或某个官方图组的小计。基准工具的系统级对比就是从这儿开始的。
+function scopeAgg(scope) {
+  const parts = ((S.data && S.data.parts) || []).filter((p) => {
+    if (p.group !== scope.group) return false;
+    if (!scope.subgroup) return true;
+    return (p.subgroup_en || p.subgroup_zh || '—') === scope.subgroup;
+  });
+  let mass = 0, cost = 0, time = 0, removable = 0, destructive = 0;
+  const byMat = new Map();
+  // 组内也只统计叶子件：这一组里若某件是别件的父，它的重量已经是子件之和
+  const ids = new Set(parts.map((p) => p.id));
+  const hasKidInScope = new Set(parts.filter((p) => ids.has(p.parent)).map((p) => p.parent));
+  for (const p of parts) {
+    if (hasKidInScope.has(p.id)) continue;
+    const q = p.qty || 1;
+    mass += (p.weight_g || 0) * q;
+    cost += (p.cost_cny || 0) * q;
+    if (p.disassembly_kind === 'destructive') destructive++;
+    else { removable++; time += p.disassembly_min || 0; }
+    if (p.material) byMat.set(p.material, (byMat.get(p.material) || 0) + (p.weight_g || 0) * q);
+  }
+  const heavy = parts.slice().sort((a, b) =>
+    (b.weight_g || 0) * (b.qty || 1) - (a.weight_g || 0) * (a.qty || 1)).slice(0, 5);
+  return { parts, mass, cost, time, removable, destructive, heavy,
+           byMat: Array.from(byMat.entries()).sort((a, b) => b[1] - a[1]).slice(0, 5) };
+}
+
+function renderScope() {
+  const L = t(), sc = S.scope, a = scopeAgg(sc);
+  if (!a.parts.length) return '';
+  const title = sc.subgroup
+    ? (S.lang === 'zh' ? (a.parts[0].subgroup_zh || sc.subgroup) : (a.parts[0].subgroup_en || sc.subgroup))
+    : (GROUP_NAME[S.lang][sc.group] || sc.group);
+  const kicker = sc.subgroup ? (GROUP_NAME[S.lang][sc.group] || sc.group) : '';
+  let h = `<div class="agg">`;
+  h += `<button type="button" class="pill mini" id="scopeBack">${esc(L.scopeBack)}</button>`;
+  if (kicker) h += `<div class="p-kicker" style="color:${GROUP_COLOR[sc.group]}">${esc(kicker)}</div>`;
+  h += `<h2 class="p-name">${esc(title)}</h2>`;
+  h += `<p class="p-alt">${esc(L.scopeHint)}</p>`;
+  h += `<div class="p-sec"><dl class="kv">`;
+  h += `<dt>${esc(L.scopeParts)}</dt><dd class="mono">${a.parts.length}</dd>`;
+  h += `<dt>${esc(L.scopeMass)}</dt><dd class="mono">${esc(fmtMass(a.mass))}</dd>`;
+  h += `<dt>${esc(L.scopeCost)}</dt><dd class="mono">¥${Math.round(a.cost).toLocaleString()}</dd>`;
+  h += `<dt>${esc(L.scopeTime)}</dt><dd class="mono">${a.time.toFixed(1)} min</dd>`;
+  h += `<dt>${esc(L.aggDisasm)}</dt><dd class="mono">${a.removable} / ${a.destructive}</dd>`;
+  h += `</dl></div>`;
+  if (a.byMat.length) {
+    const mx = a.byMat[0][1];
+    h += `<div class="p-sec"><h4>${esc(L.aggMat)}</h4>`;
+    for (const [m, v] of a.byMat) {
+      const nm = VOCAB.material[m] ? VOCAB.material[m][S.lang === 'zh' ? 0 : 1] : m;
+      const pct = Math.max(1.5, (v / mx) * 100);
+      h += `<div class="agg-row"><span class="agg-lb">${esc(nm)}</span>`
+        + `<span class="agg-bar"><i style="width:${pct.toFixed(1)}%;background:#6b7280"></i></span>`
+        + `<span class="agg-val mono">${esc(fmtMass(v))}</span></div>`;
+    }
+    h += `</div>`;
+  }
+  h += `<div class="p-sec"><h4>${esc(L.scopeHeaviest)}</h4><div class="chips">`;
+  for (const p of a.heavy) {
+    h += `<span class="chip flat" data-goto="${esc(p.id)}">${esc(partName(p).main)}`
+      + ` <b class="mono">${esc(fmtMass((p.weight_g || 0) * (p.qty || 1)))}</b></span>`;
+  }
+  h += `</div></div></div>`;
+  return h;
+}
+
 function renderPanel() {
   const body = el('panelBody');
   const empty = el('panelEmpty');
@@ -540,7 +619,13 @@ function renderPanel() {
     // 没选中零件时，右栏给整车层面的汇总，而不是一句「还没有选中零件」。
     // 质量分布 / 材料构成 / 紧固件合计 —— 这是拆解基准工具真正的看点。
     body.hidden = true; empty.hidden = false; body.innerHTML = '';
-    empty.innerHTML = renderAggregate();
+    empty.innerHTML = S.scope ? renderScope() : renderAggregate();
+    const bk = el('scopeBack');
+    if (bk) bk.addEventListener('click', () => { S.scope = null; renderPanel(); });
+    empty.querySelectorAll('[data-goto]').forEach((n) => {
+      n.style.cursor = 'pointer';
+      n.addEventListener('click', () => selectPart(n.getAttribute('data-goto'), true));
+    });
     return;
   }
   empty.hidden = true; body.hidden = false;
@@ -677,6 +762,7 @@ function applyHighlight(id) {
 
 function selectPart(id, focus) {
   if (!S.byId.has(id)) return false;
+  S.scope = null;
   clearHighlight();
   S.selected = id;
   applyHighlight(id);
@@ -1138,6 +1224,14 @@ const api = {
     el('btnTree').classList.toggle('primary', on);
     if (on) { renderTreeTags(); renderTree(); }
     return !tr.hidden;
+  },
+  scopeStats(group, subgroup) {
+    const keep = S.scope;
+    S.scope = subgroup ? { group, subgroup } : { group };
+    const a = scopeAgg(S.scope);
+    S.scope = keep;
+    return { parts: a.parts.length, mass_g: a.mass, cost_cny: Math.round(a.cost),
+             disasm_min: Math.round(a.time * 10) / 10, removable: a.removable, destructive: a.destructive };
   },
   exportBOM,
   resetView,
