@@ -31,7 +31,10 @@ const I18N = {
     kGroup: '所属部分', kSub: '官方图组', kPn: '零件号', kQty: '整车数量',
     kSpec: '规格', kTags: '标签', kConn: '连到哪些零件', kSup: '供应商',
     kMaterial: '材料', kProcess: '成型工艺', kWeight: '单件重量', kFasten: '连接方式',
-    kCost: '成本估算',
+    kCost: '成本估算', kDisasm: '拆解工时', kDepth: '装配层级',
+    disasmKind: { removable: '可无损拆卸', destructive: '焊接，不可无损拆卸' },
+    aggDisasm: '可拆性', aggDisasmTotal: '可拆件工时合计',
+    aggDisasmNote: '工时 = Σ(每种紧固件的单件拆卸耗时 × 数量) + 装配层级 × 通达系数。层级代表要先拆掉几层才够得着它。焊接件按破坏性拆解处理，不计工时。',
     basis: { category_typical: '品类经验值', sum_of_children: '子件之和', official: '官方数据',
              parametric_model: '参数化模型' },
     aggCost: '按部分的成本估算', aggCostTotal: '成本估算合计',
@@ -82,7 +85,10 @@ const I18N = {
     kGroup: 'Group', kSub: 'Diagram group', kPn: 'Part number', kQty: 'Qty per car',
     kSpec: 'Spec', kTags: 'Tags', kConn: 'Connects to', kSup: 'Suppliers',
     kMaterial: 'Material', kProcess: 'Process', kWeight: 'Mass each', kFasten: 'Fastening',
-    kCost: 'Cost estimate',
+    kCost: 'Cost estimate', kDisasm: 'Removal time', kDepth: 'Assembly level',
+    disasmKind: { removable: 'Non-destructively removable', destructive: 'Welded, not removable without cutting' },
+    aggDisasm: 'Removability', aggDisasmTotal: 'Removal time, removable parts',
+    aggDisasmNote: 'Time = sum(per-fastener removal time x count) + assembly level x access factor. The level says how many layers must come off before you can reach it. Welded parts are destructive-removal only and carry no time.',
     basis: { category_typical: 'category typical', sum_of_children: 'sum of children', official: 'official',
              parametric_model: 'parametric model' },
     aggCost: 'Cost estimate by group', aggCostTotal: 'Cost estimate total',
@@ -382,7 +388,7 @@ function exportBOM() {
   const parts = (S.data && S.data.parts) || [];
   const head = ['id', 'group', 'subgroup_en', 'subgroup_zh', 'name_en', 'name_zh',
     'oem_pn', 'parent', 'qty', 'qty_kind', 'material', 'process',
-    'weight_g', 'weight_basis', 'cost_cny', 'cost_basis', 'fastening', 'tags',
+    'weight_g', 'weight_basis', 'cost_cny', 'cost_basis', 'disassembly_min', 'disassembly_kind', 'tree_depth', 'fastening', 'tags',
     'has_mesh', 'spec', 'suppliers'];
   const cell = (v) => {
     let x;
@@ -445,7 +451,7 @@ function aggregate() {
   for (const p of parts) if (p.parent && byid.has(p.parent)) hasKid.add(p.parent);
 
   let total = 0;
-  let cost = 0;
+  let cost = 0, disasm = 0, nRemov = 0, nDestr = 0;
   const byGroup = new Map(), byMat = new Map(), byFas = new Map(), byCost = new Map();
   for (const p of parts) {
     if (hasKid.has(p.id)) continue;
@@ -455,10 +461,13 @@ function aggregate() {
     if (p.material) byMat.set(p.material, (byMat.get(p.material) || 0) + w);
     for (const f of p.fastening || []) byFas.set(f.type, (byFas.get(f.type) || 0) + (f.count || 0) * q);
     cost += (p.cost_cny || 0) * q;
+    if (p.disassembly_kind === 'destructive') nDestr++;
+    else { nRemov++; disasm += (p.disassembly_min || 0); }
     byCost.set(p.group, (byCost.get(p.group) || 0) + (p.cost_cny || 0) * q);
   }
   const srt = (m) => Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
-  return { total, cost, byGroup: srt(byGroup), byMat: srt(byMat), byFas: srt(byFas), byCost: srt(byCost) };
+  return { total, cost, disasm, nRemov, nDestr,
+           byGroup: srt(byGroup), byMat: srt(byMat), byFas: srt(byFas), byCost: srt(byCost) };
 }
 
 function renderAggregate() {
@@ -500,6 +509,19 @@ function renderAggregate() {
         + `<span class="agg-val mono">¥${Math.round(v).toLocaleString()}</span></div>`;
     }
     h += `<p class="agg-note">${esc(L.aggCostNote)}</p></div>`;
+  }
+  if (a.nRemov || a.nDestr) {
+    h += `<div class="p-sec"><h4>${esc(L.aggDisasm)}</h4>`;
+    h += `<div class="agg-total mono">${esc(L.aggDisasmTotal)} <b>${(a.disasm / 60).toFixed(1)} h</b></div>`;
+    const mx = Math.max(a.nRemov, a.nDestr);
+    for (const [lb, n, c] of [[L.disasmKind.removable, a.nRemov, '#3f6b4a'],
+                              [L.disasmKind.destructive, a.nDestr, '#c0342c']]) {
+      const pct = Math.max(1.5, (n / mx) * 100);
+      h += `<div class="agg-row"><span class="agg-lb">${esc(lb)}</span>`
+        + `<span class="agg-bar"><i style="width:${pct.toFixed(1)}%;background:${c}"></i></span>`
+        + `<span class="agg-val mono">${n}</span></div>`;
+    }
+    h += `<p class="agg-note">${esc(L.aggDisasmNote)}</p></div>`;
   }
   h += `<div class="p-sec"><h4>${esc(L.aggFas)}</h4><div class="chips">`;
   for (const [f, n] of a.byFas) {
@@ -555,6 +577,14 @@ function renderPanel() {
   if (typeof p.cost_cny === 'number') {
     h += `<dt>${esc(L.kCost)}</dt><dd class="mono">¥${esc(p.cost_cny.toFixed(2))}`
       + `<span class="conf">${esc(L.basis[p.cost_basis] || p.cost_basis)}</span></dd>`;
+  }
+  if (typeof p.disassembly_min === 'number') {
+    const dk = L.disasmKind[p.disassembly_kind] || p.disassembly_kind;
+    const val = p.disassembly_kind === 'destructive'
+      ? esc(dk)
+      : esc(p.disassembly_min.toFixed(1)) + ' min<span class="conf">' + esc(dk) + '</span>';
+    h += `<dt>${esc(L.kDisasm)}</dt><dd class="mono">${val}</dd>`;
+    h += `<dt>${esc(L.kDepth)}</dt><dd class="mono">${esc(String(p.tree_depth))}</dd>`;
   }
   if (Array.isArray(p.fastening) && p.fastening.length) {
     const fs = p.fastening.map((f) => {

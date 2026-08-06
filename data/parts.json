@@ -93,7 +93,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 25359.47,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 0.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 0
   },
   {
    "id": "front_suspension_assy",
@@ -151,7 +154,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 2607.06,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_suspension_assy",
@@ -208,7 +214,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 1449.34,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "brake_system_assy",
@@ -266,7 +275,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 284.34,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "steering_assy",
@@ -324,7 +336,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 257.73,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_axle_hub_rh",
@@ -384,7 +399,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 1722.58,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_hub_bearing_rh",
@@ -443,7 +461,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 344.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_hub_bolt",
@@ -501,7 +522,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "front_axle_nut",
@@ -558,7 +582,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "front_brake_disc",
@@ -617,7 +644,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 129.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "rear_brake_disc",
@@ -676,7 +706,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 129.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "front_caliper_rh",
@@ -734,7 +767,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 134.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_brake_pad",
@@ -791,7 +827,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 72.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "rear_caliper_rh",
@@ -849,7 +888,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 134.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_brake_pad",
@@ -906,7 +948,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 72.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "brake_master_cyl",
@@ -964,7 +1009,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 42.78,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "brake_booster",
@@ -1022,7 +1070,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 10.45,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "brake_pedal_support",
@@ -1079,7 +1130,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "brake_flex_hose_front",
@@ -1136,7 +1190,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "parking_brake_cable",
@@ -1193,7 +1250,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 58.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "steering_gear_assy",
@@ -1251,7 +1311,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 54.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "tie_rod_end",
@@ -1309,7 +1372,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 18.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "steering_column_assy",
@@ -1367,7 +1433,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 203.43,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "steering_intermediate_shaft",
@@ -1424,7 +1493,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "steering_wheel_assy",
@@ -1482,7 +1554,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 141.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "diff_bearing_case_front",
@@ -1541,7 +1616,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "diff_bearing_case_rear",
@@ -1600,7 +1678,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "diff_race_case_front",
@@ -1657,7 +1738,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "diff_race_case_rear",
@@ -1714,7 +1798,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "pinion_bearing_front",
@@ -1772,7 +1859,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "pinion_bearing_rear",
@@ -1830,7 +1920,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "pinion_thrust_needle",
@@ -1887,7 +1980,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cvt_input_thrust_needle",
@@ -1944,7 +2040,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cvt_input_thrust_race",
@@ -2001,7 +2100,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cvt_planetary_thrust_needle",
@@ -2059,7 +2161,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_input_bearing_rear",
@@ -2117,7 +2222,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_input_bearing_front",
@@ -2175,7 +2283,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_output_bearing_front",
@@ -2233,7 +2344,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_output_bearing_rear",
@@ -2291,7 +2405,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_needle_1st",
@@ -2349,7 +2466,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_needle_2nd",
@@ -2407,7 +2527,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_needle_3rd",
@@ -2464,7 +2587,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_needle_6th",
@@ -2522,7 +2648,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_race_2nd",
@@ -2580,7 +2709,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_race_6th",
@@ -2638,7 +2770,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "alternator_bearing",
@@ -2695,7 +2830,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "engine_room_wire_main",
@@ -2753,7 +2891,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 58.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "battery",
@@ -2812,7 +2953,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 519.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "battery_neg_terminal",
@@ -2869,7 +3013,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ecu_engine",
@@ -2929,7 +3076,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "sensor_knock",
@@ -2987,7 +3137,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "sensor_af_ratio",
@@ -3045,7 +3198,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "sensor_water_temp",
@@ -3103,7 +3259,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "sensor_fuel_pressure",
@@ -3161,7 +3320,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "sensor_oil_press_temp",
@@ -3219,7 +3381,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "relay_efi_main",
@@ -3276,7 +3441,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "headlamp_bulb_turn",
@@ -3333,7 +3501,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "headlamp_assy",
@@ -3392,7 +3563,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 141.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_comb_lamp_rh",
@@ -3450,7 +3624,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 109.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_lamp_socket_rh",
@@ -3507,7 +3684,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 82.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "bulb_backup",
@@ -3564,7 +3744,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "interior_lamp_vanity",
@@ -3621,7 +3804,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "radio_display_receiver",
@@ -3681,7 +3867,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "audio_amplifier",
@@ -3740,7 +3929,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "speaker_front_no1",
@@ -3799,7 +3991,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "speaker_front_no2",
@@ -3857,7 +4052,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "speaker_front_no3",
@@ -3915,7 +4113,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "speaker_rear",
@@ -3973,7 +4174,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "antenna_telephone",
@@ -4032,7 +4236,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "antenna_cord",
@@ -4090,7 +4297,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "wiper_motor",
@@ -4149,7 +4359,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "wiper_link",
@@ -4208,7 +4421,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "wiper_arm_rh",
@@ -4265,7 +4481,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 6.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "wiper_blade_rh",
@@ -4322,7 +4541,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 5
   },
   {
    "id": "washer_motor_pump",
@@ -4380,7 +4602,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "washer_jar",
@@ -4438,7 +4663,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "washer_nozzle",
@@ -4496,7 +4724,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "blower_motor",
@@ -4555,7 +4786,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "window_motor_front_rh",
@@ -4615,7 +4849,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "power_window_switch",
@@ -4674,7 +4911,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_lock_front_rh",
@@ -4734,7 +4974,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "airbag_sensor_front_rh",
@@ -4792,7 +5035,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "side_airbag_sensor_rh",
@@ -4850,7 +5096,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "speed_sensor_front_rh",
@@ -4909,7 +5158,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "skid_sensor_wire_rh",
@@ -4966,7 +5218,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 58.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "tpms_receiver",
@@ -5026,7 +5281,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "tpms_valve",
@@ -5085,7 +5343,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 12.73,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "horn_low",
@@ -5143,7 +5404,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 23.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "mirror_outer_rh",
@@ -5203,7 +5467,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 35.28,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mirror_inner",
@@ -5260,7 +5527,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 35.28,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_door_rh_assy",
@@ -5320,7 +5590,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 524.58,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_door_lh_assy",
@@ -5380,7 +5653,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 440.65,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "rear_door_rh_assy",
@@ -5439,7 +5715,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 213.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_door_glass_rh",
@@ -5498,7 +5777,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_glass_rh",
@@ -5557,7 +5839,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "window_regulator_front_rh",
@@ -5616,7 +5901,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 40.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_window_regulator_rh",
@@ -5674,7 +5962,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 40.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_glass_run_front_rh",
@@ -5733,7 +6024,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_door_weatherstrip_rh",
@@ -5792,7 +6086,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_hinge_upper_rh",
@@ -5850,7 +6147,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_hinge_upper_rh",
@@ -5908,7 +6208,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_outside_handle_rh",
@@ -5966,7 +6269,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 74.64,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_handle_frame_rh",
@@ -6023,7 +6329,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "door_lock_cylinder_rh",
@@ -6080,7 +6389,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "seat_cushion_spring_lh",
@@ -6137,7 +6449,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 18.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_back_spring_lh",
@@ -6194,7 +6509,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 18.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_adjuster_lumbar_lh",
@@ -6251,7 +6569,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 24.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_cushion_shield_lh",
@@ -6308,7 +6629,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.96,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_seat_back_hinge_rh",
@@ -6365,7 +6689,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hood_panel",
@@ -6424,7 +6751,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 164.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "hood_hinge_rh",
@@ -6481,7 +6811,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hood_support",
@@ -6538,7 +6871,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_fender_rh",
@@ -6596,7 +6932,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 64.9,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_bumper_cover",
@@ -6655,7 +6994,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_bumper_reinforcement",
@@ -6713,7 +7055,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 144.38,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_bumper_absorber",
@@ -6770,7 +7115,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_bumper_cover",
@@ -6828,7 +7176,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "radiator_grille_lower",
@@ -6885,7 +7236,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 232.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "windshield_moulding_outer",
@@ -6944,7 +7298,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "cowl_panel",
@@ -7003,7 +7360,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "roof_panel",
@@ -7061,7 +7421,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 306.0,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "roof_headlining",
@@ -7118,7 +7481,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 2
   },
   {
    "id": "sunroof_glass",
@@ -7177,7 +7543,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 55.6,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "sunroof_drive_gear",
@@ -7235,7 +7604,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "sunroof_weatherstrip",
@@ -7292,7 +7664,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "trunk_lid",
@@ -7350,7 +7725,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 270.4,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "trunk_lock",
@@ -7409,7 +7787,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "instrument_panel_assy",
@@ -7468,7 +7849,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 1038.56,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "ip_register_center",
@@ -7525,7 +7909,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "console_cup_holder",
@@ -7582,7 +7969,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "floor_mat_front",
@@ -7639,7 +8029,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "engine_under_cover",
@@ -7697,7 +8090,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_suspension_crossmember",
@@ -7757,7 +8153,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 403.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "fuel_tank_cap",
@@ -7813,7 +8212,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "fuel_tank_main_tube",
@@ -7871,7 +8273,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "engine_assy",
@@ -7930,7 +8335,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 4536.1,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "cylinder_block_assy",
@@ -7989,7 +8397,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1116.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "head_cover_gasket",
@@ -8047,7 +8458,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "crankshaft",
@@ -8106,7 +8520,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 293.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "piston",
@@ -8164,7 +8581,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "piston_ring_set",
@@ -8221,7 +8641,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "connecting_rod",
@@ -8278,7 +8701,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 12.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "crank_timing_sprocket",
@@ -8336,7 +8762,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 16.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "camshaft_timing_gear",
@@ -8394,7 +8823,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "valve_intake",
@@ -8452,7 +8884,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.95,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "valve_exhaust",
@@ -8510,7 +8945,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.95,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "valve_stem_seal",
@@ -8568,7 +9006,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "spark_plug",
@@ -8625,7 +9066,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "ignition_coil",
@@ -8683,7 +9127,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 269.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "oil_pump",
@@ -8742,7 +9189,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "oil_strainer",
@@ -8799,7 +9249,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "oil_pan",
@@ -8857,7 +9310,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 10.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "oil_drain_plug",
@@ -8914,7 +9370,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "oil_drain_gasket",
@@ -8971,7 +9430,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "oil_filter",
@@ -9029,7 +9491,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "oil_filter_bracket",
@@ -9086,7 +9551,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "water_pump",
@@ -9145,7 +9613,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "vbelt_tensioner",
@@ -9203,7 +9674,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 22.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "fan_shroud",
@@ -9262,7 +9736,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "radiator_cap",
@@ -9319,7 +9796,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "coolant_hose_inlet",
@@ -9377,7 +9857,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "thermostat_inlet",
@@ -9435,7 +9918,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "air_cleaner_element",
@@ -9492,7 +9978,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "air_cleaner_case",
@@ -9550,7 +10039,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 36.6,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "air_cleaner_cap",
@@ -9607,7 +10099,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "intake_manifold",
@@ -9666,7 +10161,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 76.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "intake_manifold_gasket",
@@ -9723,7 +10221,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "exhaust_manifold_gasket",
@@ -9780,7 +10281,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "manifold_stay",
@@ -9838,7 +10342,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "exhaust_pipe_front",
@@ -9897,7 +10404,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 21.22,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "exhaust_pipe_tail",
@@ -9954,7 +10464,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 18.72,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "exhaust_support",
@@ -10011,7 +10524,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "egr_valve",
@@ -10070,7 +10586,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 101.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "egr_cooler",
@@ -10128,7 +10647,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 62.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "fuel_injector",
@@ -10186,7 +10708,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 3.93,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "fuel_rail",
@@ -10245,7 +10770,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.72,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "fuel_pump_hp",
@@ -10303,7 +10831,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "fuel_pipe_no1",
@@ -10361,7 +10892,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.44,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "pcv_valve",
@@ -10419,7 +10953,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 23.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "pcv_hose",
@@ -10476,7 +11013,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "alternator_assy",
@@ -10536,7 +11076,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 509.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "alternator_pulley",
@@ -10594,7 +11137,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "starter_assy",
@@ -10655,7 +11201,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 381.9,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "starter_clutch",
@@ -10712,7 +11261,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 292.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "vacuum_pump",
@@ -10770,7 +11322,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 54.85,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "timing_chain_cover",
@@ -10829,7 +11384,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "crank_front_seal",
@@ -10886,7 +11444,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "engine_mount_rh",
@@ -10944,7 +11505,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 23.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "engine_mount_bracket_rh",
@@ -11001,7 +11565,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "engine_mount_lh",
@@ -11059,7 +11626,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 46.56,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "transaxle_cvt_assy",
@@ -11119,7 +11689,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 1329.12,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "transaxle_mtm_assy",
@@ -11178,7 +11751,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "torque_converter",
@@ -11236,7 +11812,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 594.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 2
   },
   {
    "id": "cvt_oil_pump",
@@ -11294,7 +11873,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cvt_valve_body",
@@ -11353,7 +11935,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 2
   },
   {
    "id": "cvt_planetary_gear",
@@ -11411,7 +11996,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cvt_planetary_ring",
@@ -11468,7 +12056,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "parking_lock_pawl_shaft",
@@ -11525,7 +12116,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "diff_case",
@@ -11584,7 +12178,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.64,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_drive_shaft_rh",
@@ -11643,7 +12240,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 307.9,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "drive_shaft_boot_rh",
@@ -11700,7 +12300,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "drive_shaft_damper_rh",
@@ -11756,7 +12359,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 172.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "clutch_disc",
@@ -11814,7 +12420,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 129.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "clutch_cover",
@@ -11872,7 +12481,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "clutch_release_cyl",
@@ -11930,7 +12542,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 21.18,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "clutch_master_cyl",
@@ -11987,7 +12602,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "flywheel",
@@ -12045,7 +12663,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "front_shock_absorber_rh",
@@ -12103,7 +12724,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_strut_mount_rh",
@@ -12161,7 +12785,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "strut_bearing",
@@ -12218,7 +12845,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "steering_knuckle_rh",
@@ -12278,7 +12908,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "lower_ball_joint_rh",
@@ -12336,7 +12969,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 12.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "lower_control_arm_rh",
@@ -12394,7 +13030,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_axle_beam",
@@ -12453,7 +13092,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 16.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_coil_spring",
@@ -12511,7 +13153,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 75.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_trailing_arm_rh",
@@ -12569,7 +13214,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_susp_arm_no2_rh",
@@ -12626,7 +13274,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_lever",
@@ -12684,7 +13335,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "shift_fork_no1",
@@ -12742,7 +13396,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_fork_shaft_no1",
@@ -12800,7 +13457,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 54.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_detent_spring",
@@ -12857,7 +13517,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 18.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "mtm_gear_1st",
@@ -12915,7 +13578,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "wheel_disc_16",
@@ -12975,7 +13641,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 343.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "wheel_disc_spare",
@@ -13033,7 +13702,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 359.55,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "wheel_hub_nut",
@@ -13091,7 +13763,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "wheel_lock_nut",
@@ -13149,7 +13824,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "wheel_cap",
@@ -13207,7 +13885,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "hub_ornament",
@@ -13264,7 +13945,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 4.92,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "tire_valve_spare",
@@ -13321,7 +14005,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.95,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "tire_valve_cap",
@@ -13378,7 +14065,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 5
   },
   {
    "id": "tpms_fitting_kit",
@@ -13436,7 +14126,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.16,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 5
   },
   {
    "id": "tire_pressure_label",
@@ -13493,7 +14186,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.16,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "spare_tire_caution_plate",
@@ -13550,7 +14246,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 351.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "spare_wheel_carrier",
@@ -13609,7 +14308,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "spare_wheel_cushion",
@@ -13666,7 +14368,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 21.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "belt_anchor_bracket_lh",
@@ -13724,7 +14429,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_belt_retractor_cover",
@@ -13781,7 +14489,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_belt_retractor_cover_rh",
@@ -13838,7 +14549,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_seat_lock_rh",
@@ -13896,7 +14610,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "center_pillar_garnish_rh",
@@ -13955,7 +14672,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_seat_side_garnish_rh",
@@ -14013,7 +14733,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_pillar_inner_rh",
@@ -14071,7 +14794,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "center_pillar_reinf_rh",
@@ -14129,7 +14855,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "dash_panel",
@@ -14188,7 +14917,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_fender_apron_rh",
@@ -14246,7 +14978,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 62.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "floor_cross_member",
@@ -14304,7 +15039,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "side_rocker_reinf",
@@ -14362,7 +15100,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "belt_anchor_reinf",
@@ -14421,7 +15162,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "floor_heat_insulator",
@@ -14479,7 +15223,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "muffler_heat_insulator",
@@ -14536,7 +15283,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 145.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "quarter_vent_duct_rh",
@@ -14594,7 +15344,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "hvac_assy",
@@ -14654,7 +15407,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 439.84,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "cabin_air_filter",
@@ -14712,7 +15468,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "evaporator",
@@ -14771,7 +15530,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 106.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "ac_compressor",
@@ -14831,7 +15593,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 217.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "ac_condenser",
@@ -14890,7 +15655,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 142.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "ac_suction_pipe",
@@ -14948,7 +15716,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.95,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ac_service_valve",
@@ -15005,7 +15776,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.95,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "heater_hose_inlet",
@@ -15063,7 +15837,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "hvac_duct_center",
@@ -15121,7 +15898,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hvac_duct_rear",
@@ -15179,7 +15959,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "forward_camera",
@@ -15239,7 +16022,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.52,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "forward_camera_cover",
@@ -15296,7 +16082,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "millimeter_radar",
@@ -15355,7 +16144,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_camera",
@@ -15414,7 +16206,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.52,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "smart_key_ecu",
@@ -15473,7 +16268,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 188.04,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "indoor_key_antenna",
@@ -15530,7 +16328,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "immobilizer_ecu",
@@ -15588,7 +16389,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "transponder_coil",
@@ -15645,7 +16449,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ignition_lock_cylinder",
@@ -15703,7 +16510,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "trans_speed_sensor",
@@ -15762,7 +16572,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "trans_oil_press_sensor",
@@ -15821,7 +16634,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "accel_pedal",
@@ -15880,7 +16696,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "battery_clamp",
@@ -15937,7 +16756,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "grille_emblem",
@@ -15994,7 +16816,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 4.92,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_spoiler",
@@ -16051,7 +16876,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 36.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_mudguard_rh",
@@ -16108,7 +16936,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 62.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_door_belt_moulding_rh",
@@ -16166,7 +16997,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "roof_drip_moulding_rh",
@@ -16223,7 +17057,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "license_plate_lamp",
@@ -16281,7 +17118,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "reflex_reflector_rh",
@@ -16338,7 +17178,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 3.66,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "drl_lamp_rh",
@@ -16395,7 +17238,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "meter_combination",
@@ -16454,7 +17300,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 152.16,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "jack_assy",
@@ -16512,7 +17361,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 28.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "jack_handle",
@@ -16569,7 +17421,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hub_wrench",
@@ -16628,7 +17483,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "tire_repair_kit",
@@ -16686,7 +17544,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 351.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "air_compressor",
@@ -16744,7 +17605,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 217.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "first_aid_kit",
@@ -16801,7 +17665,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "glove_box_filter_case",
@@ -16859,7 +17726,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.64,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "vapor_hose",
@@ -16917,7 +17787,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "brake_tube_clamp",
@@ -16974,7 +17847,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "engine_gasket_kit",
@@ -17032,7 +17908,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "egr_pipe",
@@ -17090,7 +17969,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.44,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "front_door_glass_lh",
@@ -17149,7 +18031,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "window_regulator_front_lh",
@@ -17208,7 +18093,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 40.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "window_motor_front_lh",
@@ -17268,7 +18156,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_glass_run_front_lh",
@@ -17327,7 +18218,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_door_weatherstrip_lh",
@@ -17386,7 +18280,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_glass_inner_ws_rh",
@@ -17444,7 +18341,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_fix_window_ws_rh",
@@ -17502,7 +18402,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_frame_garnish_rh",
@@ -17560,7 +18463,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_glass_lh",
@@ -17619,7 +18525,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_window_regulator_lh",
@@ -17677,7 +18586,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 40.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_quarter_ws_lh",
@@ -17734,7 +18646,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_ws_lh",
@@ -17792,7 +18707,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 23.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_lock_lh",
@@ -17852,7 +18770,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "door_handle_cover_rh",
@@ -17909,7 +18830,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "door_lock_cylinder_lh",
@@ -17966,7 +18890,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "trunk_lock_cylinder",
@@ -18023,7 +18950,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mirror_outer_lh",
@@ -18083,7 +19013,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 35.28,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mirror_glass_rh",
@@ -18141,7 +19074,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 35.28,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "mirror_glass_lh",
@@ -18199,7 +19135,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 35.28,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "rear_comb_lamp_lh",
@@ -18257,7 +19196,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 27.0,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 2.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_lamp_inner_lh",
@@ -18315,7 +19257,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "bulb_rear_turn",
@@ -18372,7 +19317,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "bulb_side_marker",
@@ -18429,7 +19377,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "lamp_luggage",
@@ -18487,7 +19438,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "lamp_glove_box",
@@ -18544,7 +19498,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "lamp_instrument_panel",
@@ -18601,7 +19558,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 13.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "switch_stop_lamp",
@@ -18660,7 +19620,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "switch_backup_lamp",
@@ -18719,7 +19682,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "switch_courtesy_front",
@@ -18778,7 +19744,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "switch_wiper",
@@ -18836,7 +19805,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 27.75,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "fuel_pump_ecu",
@@ -18894,7 +19866,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "sensor_vacuum_efi",
@@ -18952,7 +19927,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "sensor_speed_front_lh",
@@ -19011,7 +19989,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "skid_sensor_wire_lh",
@@ -19068,7 +20049,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 58.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "side_airbag_pressure_rh",
@@ -19126,7 +20110,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 17.88,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "tpms_door_receiver",
@@ -19186,7 +20173,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "wireless_buzzer",
@@ -19243,7 +20233,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 82.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "key_antenna_outer",
@@ -19300,7 +20293,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "transceiver_cover",
@@ -19359,7 +20355,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ac_amplifier",
@@ -19418,7 +20417,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 136.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "hvac_duct_air_no1",
@@ -19476,7 +20478,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "ip_register_no1",
@@ -19533,7 +20538,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ip_register_no2",
@@ -19590,7 +20598,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 10.76,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.4,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hood_hinge_lh",
@@ -19648,7 +20659,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 15.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "fender_seal",
@@ -19706,7 +20720,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_fender_lh",
@@ -19764,7 +20781,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 62.4,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 4.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "front_mudguard_lh",
@@ -19821,7 +20841,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 62.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_mudguard_rh",
@@ -19879,7 +20902,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "upper_back_panel",
@@ -19937,7 +20963,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "trunk_lock_striker",
@@ -19995,7 +21024,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "trunk_name_plate",
@@ -20052,7 +21084,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 134.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "trunk_outside_garnish",
@@ -20110,7 +21145,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "roof_silencer_pad",
@@ -20167,7 +21205,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 2
   },
   {
    "id": "roof_side_rail_pad",
@@ -20224,7 +21265,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.0,
+   "disassembly_kind": "destructive",
+   "tree_depth": 2
   },
   {
    "id": "windshield_moulding_inner",
@@ -20282,7 +21326,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "center_pillar_garnish_lh",
@@ -20341,7 +21388,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_seat_side_garnish_lh",
@@ -20399,7 +21449,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_pillar_outer_rh",
@@ -20457,7 +21510,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_pillar_reinf_lower_rh",
@@ -20515,7 +21571,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_floor_cross_reinf_rh",
@@ -20573,7 +21632,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_side_member_ext_rh",
@@ -20631,7 +21693,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "engine_under_cover_rear_rh",
@@ -20689,7 +21754,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_suspension_member",
@@ -20748,7 +21816,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "front_floor_cover_rh",
@@ -20805,7 +21876,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "battery_clamp_no2",
@@ -20863,7 +21937,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.26,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "engine_mount_stay_lh",
@@ -20921,7 +21998,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "engine_mount_bracket_lh",
@@ -20978,7 +22058,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "water_bypass_hose",
@@ -21036,7 +22119,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "oil_strainer_gasket",
@@ -21094,7 +22180,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 9.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 5
   },
   {
    "id": "water_pump_gasket",
@@ -21151,7 +22240,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "spark_plug_tube_gasket",
@@ -21209,7 +22301,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "cam_bearing_cap_gasket",
@@ -21266,7 +22361,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "cylinder_head_bolt",
@@ -21323,7 +22421,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "camshaft_exhaust_gear",
@@ -21381,7 +22482,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "flywheel_pin",
@@ -21438,7 +22542,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 9.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 5
   },
   {
    "id": "exhaust_pipe_gasket",
@@ -21495,7 +22602,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "vacuum_pump_vane",
@@ -21552,7 +22662,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 53.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "vacuum_pump_oring",
@@ -21609,7 +22722,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 8.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "pcv_hose_no2",
@@ -21667,7 +22783,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 7.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "alternator_rotor",
@@ -21725,7 +22844,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 335.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "alternator_regulator",
@@ -21783,7 +22905,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 40.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "starter_armature",
@@ -21840,7 +22965,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "timing_case_oil_seal",
@@ -21897,7 +23025,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "air_cleaner_inlet",
@@ -21954,7 +23085,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "ignition_coil_alt",
@@ -22012,7 +23146,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 269.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "valve_grind_gasket_kit",
@@ -22070,7 +23207,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_fork_no2",
@@ -22127,7 +23267,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_fork_shaft_no2",
@@ -22185,7 +23328,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "shift_select_shaft",
@@ -22243,7 +23389,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_reverse_gear_bearing",
@@ -22300,7 +23449,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_reverse_shaft_bearing",
@@ -22358,7 +23510,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 14.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_output_shim_rear",
@@ -22415,7 +23570,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "mtm_input_snap_ring",
@@ -22472,7 +23630,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "mtm_4th_spacer",
@@ -22529,7 +23690,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 2.58,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_5th_race",
@@ -22587,7 +23751,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 7.32,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "mtm_2nd_lock_ball",
@@ -22644,7 +23811,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "brake_pedal_pad",
@@ -22701,7 +23871,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "brake_reservoir",
@@ -22759,7 +23932,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "brake_reservoir_strainer",
@@ -22816,7 +23992,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 20.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "brake_master_bracket",
@@ -22873,7 +24052,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "brake_booster_gasket",
@@ -22930,7 +24112,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.25,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "vacuum_check_hose",
@@ -22988,7 +24173,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 9.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "parking_brake_cable_no1",
@@ -23046,7 +24234,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 82.3,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "parking_brake_stopper",
@@ -23103,7 +24294,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 82.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "tie_rod_castle_nut",
@@ -23160,7 +24354,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 4
   },
   {
    "id": "tie_rod_end_lh",
@@ -23218,7 +24415,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 18.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "steering_knuckle_lh",
@@ -23277,7 +24477,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 86.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.6,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "lower_control_arm_lh",
@@ -23335,7 +24538,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_shock_absorber_lh",
@@ -23393,7 +24599,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_susp_upper_arm_rh",
@@ -23451,7 +24660,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_susp_arm_no1_rh",
@@ -23509,7 +24721,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_trailing_arm_lh",
@@ -23566,7 +24781,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 48.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "drive_shaft_boot_lh",
@@ -23623,7 +24841,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.5,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "front_drive_shaft_lh",
@@ -23681,7 +24902,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_hub_bolt",
@@ -23738,7 +24962,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "rear_axle_bearing_bolt",
@@ -23795,7 +25022,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 1.3,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 3
   },
   {
    "id": "rear_door_lh_assy",
@@ -23855,7 +25085,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 130.9,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "package_tray_panel",
@@ -23913,7 +25146,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 25.7,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "horn_bracket",
@@ -23970,7 +25206,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_door_glass_run_rh",
@@ -24029,7 +25268,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_bumper_reinforcement",
@@ -24087,7 +25329,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 59.2,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.5,
+   "disassembly_kind": "destructive",
+   "tree_depth": 1
   },
   {
    "id": "seat_side_airbag_lh",
@@ -24147,7 +25392,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 49.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_heater_lh",
@@ -24206,7 +25454,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 16.44,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_cushion_pad_lh",
@@ -24264,7 +25515,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 758.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "seat_track_handle",
@@ -24321,7 +25575,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 758.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_seat_back_frame_rh",
@@ -24379,7 +25636,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 758.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "rear_seat_cushion_pad",
@@ -24437,7 +25697,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 758.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "isofix_anchor_rh",
@@ -24495,7 +25758,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "radiator_assy",
@@ -24553,7 +25819,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 232.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "throttle_body",
@@ -24611,7 +25880,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 33.85,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "exhaust_manifold",
@@ -24669,7 +25941,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 76.8,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 6.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "camshaft_intake",
@@ -24726,7 +26001,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 42.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "fuel_tank",
@@ -24783,7 +26061,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 352.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "windshield_glass",
@@ -24840,7 +26121,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 32.1,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "cylinder_head",
@@ -24898,7 +26182,10 @@
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
    "cost_cny": 2556.23,
-   "cost_basis": "sum_of_children"
+   "cost_basis": "sum_of_children",
+   "disassembly_min": 7.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "rear_shock_absorber",
@@ -24955,7 +26242,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 126.5,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 4.2,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "front_coil_spring",
@@ -25011,7 +26301,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 75.0,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 5.0,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "hood_lock",
@@ -25068,7 +26361,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 11.6,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.7,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   },
   {
    "id": "brake_pedal",
@@ -25125,7 +26421,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 6.24,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.8,
+   "disassembly_kind": "removable",
+   "tree_depth": 2
   },
   {
    "id": "seat_belt_front_lh",
@@ -25181,7 +26480,10 @@
    "weight_basis": "category_typical",
    "weight_conf": "typical",
    "cost_cny": 758.4,
-   "cost_basis": "parametric_model"
+   "cost_basis": "parametric_model",
+   "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
   }
  ]
 }

@@ -84,6 +84,21 @@ PROC_RATE = {          # 元/kg，含设备折旧与人工
 }
 FASTENER_COST = 0.6    # 元/个，含件本身与装配工时分摊
 
+# ── 拆解工时模型
+# 拆解基准报告里的标准输出：拆下这个零件要多久、拆不拆得下来。
+# 我们已有紧固件的类型和数量、以及装配树的深度，这两样正好够推：
+#     工时 = Σ(每种紧固件的单个拆卸耗时 × 数量) + 层级深度 × 通达系数
+# 「层级深度」代表要先拆掉多少层挡在前面的东西才够得着它。
+# 焊接件不是拆卸问题而是破坏性拆解，单独标出来，不给工时。
+FASTEN_MIN = {         # 分钟/个
+    'bolt': 0.40, 'screw': 0.30, 'nut': 0.40, 'clip': 0.10, 'snap': 0.08,
+    'rivet': 1.20, 'press_fit': 2.00, 'hose_clamp': 0.50, 'connector': 0.20,
+    'thread_in': 0.50, 'adhesive': 6.00,
+    'weld_spot': 0.0, 'weld_seam': 0.0,          # 焊接：不可无损拆卸
+}
+DESTRUCTIVE = {'weld_spot', 'weld_seam'}
+ACCESS_MIN_PER_LEVEL = 1.5   # 每深一层，够着它之前要多花的分钟数
+
 # ── 连接方式词表
 FASTEN = {
     'bolt':       ('螺栓', 'Bolt'),
@@ -403,6 +418,27 @@ def main():
         p['cost_cny'] = round(s / max(1, p.get('qty') or 1), 2)
         p['cost_basis'] = 'sum_of_children'
         return s
+
+    # 拆解工时与可拆性。深度 = 从整车根节点往下数几层。
+    depth = {}
+
+    def depth_of(pid, guard=0):
+        if pid in depth:
+            return depth[pid]
+        p = byid.get(pid)
+        par = p.get('parent') if p else None
+        d = 0 if (not par or par not in byid or guard > 20) else depth_of(par, guard + 1) + 1
+        depth[pid] = d
+        return d
+
+    for p in parts:
+        fas = p.get('fastening') or []
+        destructive = any(f.get('type') in DESTRUCTIVE and f.get('count') for f in fas)
+        mins = sum(FASTEN_MIN.get(f.get('type'), 0.3) * (f.get('count') or 0) for f in fas)
+        mins += depth_of(p['id']) * ACCESS_MIN_PER_LEVEL
+        p['disassembly_min'] = round(mins, 1)
+        p['disassembly_kind'] = 'destructive' if destructive else 'removable'
+        p['tree_depth'] = depth_of(p['id'])
 
     cost_total, seenc = 0, set()
     for r in roots:
