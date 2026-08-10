@@ -180,9 +180,11 @@ const SILL_Y = 0.335;
 function sectionAt(x, v) {
   const hw = halfWidthAt(x), rhw = Math.min(topHalfWAt(x), hw), ty = topYAt(x), by = Math.min(BELT_Y(x), ty - 0.01);
   // 控制点：门槛 → 侧面 → 腰线最外点 → 侧窗内收 → 肩线 → 顶中线
+  // 门槛处的半宽别收太狠：0.815 那一档会让下沿形成一条朝下的曲面，
+  // 主光打不到就是一条贯穿两扇门的黑带 —— 看着像穿帮，其实是内收角太急。
   const P = [
-    [hw * 0.815, SILL_Y],
-    [hw * 0.965, by - 0.30],
+    [hw * 0.900, SILL_Y],
+    [hw * 0.972, by - 0.30],
     [hw, by - 0.06],
     [rhw * 1.035, by + Math.min(0.16, (ty - by) * 0.42)],
     [rhw, ty - 0.055],
