@@ -454,7 +454,10 @@
    "cost_basis": "sum_of_children",
    "disassembly_min": 4.6,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "hub_unit",
+   "bearing_load": "radial_axial"
   },
   {
    "id": "rear_hub_bearing_rh",
@@ -516,7 +519,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 4.6,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "hub_unit",
+   "bearing_load": "radial_axial"
   },
   {
    "id": "front_hub_bolt",
@@ -1671,7 +1677,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "diff_bearing_case_rear",
@@ -1733,7 +1742,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "diff_race_case_front",
@@ -1793,7 +1805,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "diff_race_case_rear",
@@ -1853,7 +1868,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "pinion_bearing_front",
@@ -1914,7 +1932,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "pinion_bearing_rear",
@@ -1975,7 +1996,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "taper",
+   "bearing_load": "radial_axial_paired"
   },
   {
    "id": "pinion_thrust_needle",
@@ -2035,7 +2059,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "thrust_needle",
+   "bearing_load": "axial"
   },
   {
    "id": "cvt_input_thrust_needle",
@@ -2095,7 +2122,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "thrust_needle",
+   "bearing_load": "axial"
   },
   {
    "id": "cvt_input_thrust_race",
@@ -2155,7 +2185,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "thrust_needle",
+   "bearing_load": "axial"
   },
   {
    "id": "cvt_planetary_thrust_needle",
@@ -2216,7 +2249,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "thrust_needle",
+   "bearing_load": "axial"
   },
   {
    "id": "mtm_input_bearing_rear",
@@ -2277,7 +2313,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_input_bearing_front",
@@ -2338,7 +2377,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_output_bearing_front",
@@ -2399,7 +2441,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_output_bearing_rear",
@@ -2460,7 +2505,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_needle_1st",
@@ -2521,7 +2569,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_needle_2nd",
@@ -2582,7 +2633,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_needle_3rd",
@@ -2642,7 +2696,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_needle_6th",
@@ -2703,7 +2760,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_race_2nd",
@@ -2764,7 +2824,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_race_6th",
@@ -2825,7 +2888,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "alternator_bearing",
@@ -2885,7 +2951,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "engine_room_wire_main",
@@ -9729,7 +9798,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 1.9,
    "disassembly_kind": "removable",
-   "tree_depth": 1
+   "tree_depth": 1,
+   "bearing_role": "contains",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "fan_shroud",
@@ -11192,7 +11264,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 3.4,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "contains",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "starter_assy",
@@ -12597,7 +12672,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 3.8,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "contains",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "clutch_master_cyl",
@@ -15648,7 +15726,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 3.1,
    "disassembly_kind": "removable",
-   "tree_depth": 1
+   "tree_depth": 1,
+   "bearing_role": "contains",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "ac_condenser",
@@ -23565,7 +23646,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "bearing",
+   "bearing_kind": "deep_groove",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_output_shim_rear",
@@ -23806,7 +23890,10 @@
    "cost_basis": "parametric_model",
    "disassembly_min": 5.0,
    "disassembly_kind": "removable",
-   "tree_depth": 2
+   "tree_depth": 2,
+   "bearing_role": "race",
+   "bearing_kind": "needle",
+   "bearing_load": "radial"
   },
   {
    "id": "mtm_2nd_lock_ball",

@@ -71,6 +71,10 @@ FIELDS = [
     "disassembly_min", "disassembly_kind", "tree_depth",
 ]
 
+# 2026-08-04 第四次扩展：只挂在部分零件上的字段，允许存在但不强制每条都有。
+# 轴承专业字段只对 tags 含 bearing 的零件有意义，给全表都塞一个空值反而是噪声。
+OPTIONAL_FIELDS = ["bearing_role", "bearing_kind", "bearing_load"]
+
 # ---- 判定框架 --------------------------------------------------------------
 
 _results = []
@@ -118,7 +122,7 @@ def main():
     bad_fields = []
     for p in parts:
         missing = [k for k in FIELDS if k not in p]
-        extra = [k for k in p if k not in FIELDS]
+        extra = [k for k in p if k not in FIELDS and k not in OPTIONAL_FIELDS]
         if missing or extra:
             bad_fields.append((p.get("id", "?"), missing, extra))
     check("每条零件字段名与冻结格式完全一致（不多不少）",

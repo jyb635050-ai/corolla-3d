@@ -42,6 +42,13 @@ const I18N = {
     covNote: '这两类不给数字，因为没有可靠依据可算——给了就是编。',
     covKerb: '整备质量',
     pathTitle: '拆到它要先拆什么', pathTotal: '累计工时', pathSelf: '本件',
+    brgBtn: '轴承专题', brgTitle: '整车轴承一览',
+    brgHint: '按类型分组。轴承本体、套圈、内含轴承的总成分开列——把三者混在一起，任何按轴承做的统计都是错的。',
+    brgRole: { bearing: '轴承本体', race: '套圈 / 垫圈', contains: '内含轴承的总成' },
+    brgKind: { deep_groove: '深沟球', angular: '角接触球', taper: '圆锥滚子', needle: '滚针',
+               thrust_needle: '推力滚针', hub_unit: '轮毂单元' },
+    brgLoad: { radial: '径向为主', axial: '纯轴向', radial_axial: '径向 + 轴向',
+               radial_axial_paired: '径向 + 单向轴向，需成对预紧' },
     vsBtn: '整车对标', vsTitle: '整车对标', vsSlotTitle: '第二台车',
     vsSlotHint: '对标要两台车的数据。本站只有卡罗拉一台——把另一台车按同样的字段格式做成 data/parts.json 放进 data/vehicles/ 下，这一栏就会填上。缺的是数据，不是功能。',
     vsRows: { parts: '目录零件数', mesh: '建 3D 的', mass: '目录内质量', kerb: '整备质量',
@@ -113,6 +120,13 @@ const I18N = {
     covNote: 'No figure is given for those two, because there is no sound basis to compute one. Inventing it would be fabrication.',
     covKerb: 'Kerb mass',
     pathTitle: 'What must come off first', pathTotal: 'Cumulative time', pathSelf: 'this part',
+    brgBtn: 'Bearings', brgTitle: 'Bearings on this vehicle',
+    brgHint: 'Grouped by type. Bearings, races and bearing-containing assemblies are listed separately — mixing the three makes every bearing statistic wrong.',
+    brgRole: { bearing: 'Bearing', race: 'Race / washer', contains: 'Assembly containing a bearing' },
+    brgKind: { deep_groove: 'Deep groove ball', angular: 'Angular contact ball', taper: 'Tapered roller',
+               needle: 'Needle roller', thrust_needle: 'Thrust needle roller', hub_unit: 'Hub unit' },
+    brgLoad: { radial: 'Mainly radial', axial: 'Axial only', radial_axial: 'Radial + axial',
+               radial_axial_paired: 'Radial + one-way axial, preload in pairs' },
     vsBtn: 'Vehicle benchmark', vsTitle: 'Vehicle benchmark', vsSlotTitle: 'Second vehicle',
     vsSlotHint: 'Benchmarking needs two vehicles. This site holds only the Corolla. Build a second vehicle as a data/parts.json in the same frozen field format, drop it under data/vehicles/, and this column fills in. What is missing is the data, not the capability.',
     vsRows: { parts: 'Parts in catalogue', mesh: 'With 3D mesh', mass: 'Catalogued mass', kerb: 'Kerb mass',
@@ -212,6 +226,7 @@ const S = {
   compare: [],       // 横向对比的零件 id，最多 3 个
   compareOpen: false,
   vsOpen: false,
+  brgOpen: false,
   vehicles: [],      // 对标用：每台车一份同格式的 doc，现在只有卡罗拉      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
   anim: null,
   camAnim: null,
@@ -804,6 +819,40 @@ function renderVs() {
   return h;
 }
 
+function renderBearings() {
+  const L = t();
+  const bs = ((S.data && S.data.parts) || []).filter((p) => (p.tags || []).includes('bearing'));
+  if (!bs.length) return '';
+  let h = `<div class="agg">`;
+  h += `<button type="button" class="pill mini" id="brgBack">${esc(L.scopeBack)}</button>`;
+  h += `<h2 class="p-name">${esc(L.brgTitle)}</h2>`;
+  h += `<p class="p-alt">${esc(L.brgHint)}</p>`;
+  for (const role of ['bearing', 'race', 'contains']) {
+    const grp = bs.filter((p) => (p.bearing_role || 'bearing') === role);
+    if (!grp.length) continue;
+    h += `<div class="p-sec"><h4>${esc(L.brgRole[role])} · ${grp.length}</h4>`;
+    const byKind = new Map();
+    for (const p of grp) {
+      const k = p.bearing_kind || 'other';
+      if (!byKind.has(k)) byKind.set(k, []);
+      byKind.get(k).push(p);
+    }
+    for (const [k, arr] of byKind) {
+      const kn = L.brgKind[k] || k;
+      const ld = arr[0].bearing_load ? L.brgLoad[arr[0].bearing_load] : '';
+      h += `<div class="brg-k"><b>${esc(kn)}</b> <span class="brg-l">${esc(ld)}</span>`
+        + `<span class="brg-n mono">${arr.length}</span></div>`;
+      for (const p of arr) {
+        h += `<div class="brg-row" data-goto="${esc(p.id)}">`
+          + `<span class="brg-nm">${esc(partName(p).main)}</span>`
+          + `<span class="brg-pn mono">${esc(p.oem_pn || '—')}</span></div>`;
+      }
+    }
+    h += `</div>`;
+  }
+  return h + `</div>`;
+}
+
 function renderPanel() {
   const body = el('panelBody');
   const empty = el('panelEmpty');
@@ -812,7 +861,7 @@ function renderPanel() {
     // 没选中零件时，右栏给整车层面的汇总，而不是一句「还没有选中零件」。
     // 质量分布 / 材料构成 / 紧固件合计 —— 这是拆解基准工具真正的看点。
     body.hidden = true; empty.hidden = false; body.innerHTML = '';
-    empty.innerHTML = S.vsOpen ? renderVs() : (S.compareOpen && S.compare.length >= 2)
+    empty.innerHTML = S.brgOpen ? renderBearings() : S.vsOpen ? renderVs() : (S.compareOpen && S.compare.length >= 2)
       ? renderCompare()
       : (S.scope ? renderScope() : renderAggregate()) + renderCompareTray();
     bindCompare(empty);
@@ -820,6 +869,8 @@ function renderPanel() {
     if (bk) bk.addEventListener('click', () => { S.scope = null; S.vsOpen = false; renderPanel(); });
     const vb = el('vsBack');
     if (vb) vb.addEventListener('click', () => { S.vsOpen = false; renderPanel(); });
+    const bb = el('brgBack');
+    if (bb) bb.addEventListener('click', () => { S.brgOpen = false; renderPanel(); });
     empty.querySelectorAll('[data-goto]').forEach((n) => {
       n.style.cursor = 'pointer';
       n.addEventListener('click', () => selectPart(n.getAttribute('data-goto'), true));
@@ -1222,6 +1273,10 @@ function bindEvents() {
     (S.state === 'assembled' ? explode() : assemble());
   });
   el('btnReset').addEventListener('click', () => resetView(700));
+  el('btnBrg').addEventListener('click', () => {
+    S.brgOpen = !S.brgOpen; S.selected = null; S.scope = null; S.vsOpen = false; S.compareOpen = false;
+    clearHighlight(); el('btnBrg').classList.toggle('primary', S.brgOpen); renderPanel();
+  });
   el('btnVs').addEventListener('click', () => {
     S.vsOpen = !S.vsOpen; S.selected = null; S.scope = null; S.compareOpen = false;
     clearHighlight(); el('btnVs').classList.toggle('primary', S.vsOpen); renderPanel();
