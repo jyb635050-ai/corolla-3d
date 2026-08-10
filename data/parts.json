@@ -89,10 +89,10 @@
      "count": 24
     }
    ],
-   "weight_g": 639185,
+   "weight_g": 641035,
    "weight_basis": "sum_of_children",
    "weight_conf": "typical",
-   "cost_cny": 25359.47,
+   "cost_cny": 25417.27,
    "cost_basis": "sum_of_children",
    "disassembly_min": 0.0,
    "disassembly_kind": "destructive",
@@ -26482,6 +26482,126 @@
    "cost_cny": 758.4,
    "cost_basis": "parametric_model",
    "disassembly_min": 3.1,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
+  },
+  {
+   "id": "floor_carpet",
+   "group": "body",
+   "subgroup_en": "Floor Mat & Silencer Pad",
+   "subgroup_zh": "地毯与隔音垫",
+   "name_en": "Carpet Assy, Floor",
+   "name_zh": "地毯总成",
+   "oem_pn": "",
+   "parent": "body_shell",
+   "connects_to": [
+    "body_shell",
+    "floor_cross_member"
+   ],
+   "role_zh": "盖住地板钣金，背面那层发泡才是真正干活的——它把路面和排气传上来的中高频噪声挡在车内之外，是整车 NVH 里最便宜也最有效的一环。泡水后必须彻底掀起来晾干，闷在下面会锈穿地板。",
+   "role_en": "Covers the floor pan, but the foam backing is what actually works: it blocks the mid and high frequency noise coming up from the road and the exhaust, which makes it the cheapest and most effective single item in the whole NVH package. After a flood it must be lifted and dried completely, or the pan will rust through underneath.",
+   "qty": 1,
+   "qty_kind": "exact",
+   "tags": [
+    "body_panel"
+   ],
+   "has_mesh": false,
+   "spec": "一体成型地毯，背面复合隔音发泡层，覆盖前后地板与中通道。注：本轮未取到零件号",
+   "suppliers": [
+    {
+     "name": "丰田原厂 Toyota Genuine Parts",
+     "note": "官方目录中有该零件，但本轮未取到具体零件号，故不标 confirmed",
+     "confidence": "guess",
+     "source": ""
+    },
+    {
+     "name": "丰田纺织 Toyota Boshoku",
+     "note": "丰田系内饰件主力配套厂",
+     "confidence": "typical",
+     "source": ""
+    },
+    {
+     "name": "见规格",
+     "note": "同品类常见配套，未逐条核实",
+     "confidence": "guess",
+     "source": ""
+    }
+   ],
+   "material": "plastic_pp",
+   "process": "injection",
+   "fastening": [
+    {
+     "type": "clip",
+     "spec": "",
+     "count": 8
+    }
+   ],
+   "weight_g": 950,
+   "weight_basis": "category_typical",
+   "weight_conf": "typical",
+   "cost_cny": 25.7,
+   "cost_basis": "parametric_model",
+   "disassembly_min": 2.3,
+   "disassembly_kind": "removable",
+   "tree_depth": 1
+  },
+  {
+   "id": "back_window_glass",
+   "group": "body",
+   "subgroup_en": "Back Window Glass",
+   "subgroup_zh": "后风窗玻璃",
+   "name_en": "Glass, Back Window",
+   "name_zh": "后风窗玻璃",
+   "oem_pn": "64811-1A900",
+   "parent": "body_shell",
+   "connects_to": [
+    "body_shell",
+    "upper_back_panel"
+   ],
+   "role_zh": "后视野的全部来源，内表面那些横线是电加热除雾丝，冬天和雨天靠它化开雾气和薄冰。钢化玻璃破碎时会整片碎成钝角颗粒而不是尖片，这是它和夹层前风窗最大的区别；贴膜时若刮伤加热丝，那一条就永久不热了。",
+   "role_en": "The whole of the rearward view. Those printed lines on the inside are the heating grid that clears fog and thin ice in winter and rain. Being tempered, it shatters into blunt granules rather than shards, which is the key difference from the laminated windshield. Scratching a grid line while fitting tint kills that line permanently.",
+   "qty": 1,
+   "qty_kind": "exact",
+   "tags": [
+    "body_panel"
+   ],
+   "has_mesh": true,
+   "spec": "钢化玻璃，内表面印刷电加热丝与天线。注：零件号对应 2020–2022 款，号族 -1A9 与前风窗的 -02 不同，标 typical",
+   "suppliers": [
+    {
+     "name": "丰田原厂 Toyota Genuine Parts",
+     "note": "官方零件目录中以该零件号在售",
+     "confidence": "typical",
+     "source": "https://www.toyotapartsdeal.com/search?q=64811-1A900"
+    },
+    {
+     "name": "旭硝子 AGC",
+     "note": "丰田系汽车玻璃主力配套厂",
+     "confidence": "typical",
+     "source": ""
+    },
+    {
+     "name": "见规格",
+     "note": "同品类常见配套，未逐条核实",
+     "confidence": "guess",
+     "source": ""
+    }
+   ],
+   "material": "glass_temp",
+   "process": "float_glass",
+   "fastening": [
+    {
+     "type": "clip",
+     "spec": "",
+     "count": 4
+    }
+   ],
+   "weight_g": 900,
+   "weight_basis": "category_typical",
+   "weight_conf": "typical",
+   "cost_cny": 32.1,
+   "cost_basis": "parametric_model",
+   "disassembly_min": 1.9,
    "disassembly_kind": "removable",
    "tree_depth": 1
   }
