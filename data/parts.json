@@ -26313,7 +26313,7 @@
    "subgroup_zh": "机盖锁与铰链",
    "name_en": "Lock Assy, Hood",
    "name_zh": "发动机盖锁总成",
-   "oem_pn": "",
+   "oem_pn": "53510-02770",
    "parent": "body_shell",
    "connects_to": [
     "hood_panel",
@@ -26327,13 +26327,13 @@
     "body_panel"
    ],
    "has_mesh": false,
-   "spec": "两级锁止机构，主锁扣加安全钩，通过拉索连到驾驶席下方的开启拉手。注：未取到零件号",
+   "spec": "两级锁止机构，主锁扣加安全钩，通过拉索连到驾驶席下方的开启拉手",
    "suppliers": [
     {
      "name": "丰田原厂 Toyota Genuine Parts",
-     "note": "官方目录中有该零件，但本轮未取到具体零件号，故不标 confirmed",
-     "confidence": "guess",
-     "source": ""
+     "note": "官方零件目录中以该零件号在售，覆盖 2019–2024 款，号族 -02 与 E210 三厢车身件一致",
+     "confidence": "confirmed",
+     "source": "https://www.toyotapartsdeal.com/search?q=53510-02770"
     },
     {
      "name": "三井金属 Mitsui Kinzoku",
@@ -26387,7 +26387,7 @@
     "brake"
    ],
    "has_mesh": false,
-   "spec": "冲压钢踏板臂，杠杆比约 4:1，推杆直连真空助力器。注：未取到零件号",
+   "spec": "冲压钢踏板臂，杠杆比约 4:1，推杆直连真空助力器。注：2026-08-04 查证未取到 E210 踏板本体的独立零件号——公开检索到的 47101-02510 属 2014–2019 款 E170/E180，47110-12390 是踏板带支架总成而非踏板本体；按宁缺毋滥留空，图组已填准",
    "suppliers": [
     {
      "name": "丰田原厂 Toyota Genuine Parts",
