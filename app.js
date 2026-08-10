@@ -37,6 +37,10 @@ const I18N = {
     scopeParts: '零件数', scopeMass: '质量小计', scopeCost: '成本小计', scopeTime: '工时小计',
     scopeBack: '← 回到整车', scopeHint: '这一组的小计。点组里的零件看单件明细。',
     scopeHeaviest: '组里最重的 5 个',
+    covTitle: '目录覆盖到哪儿了', covIn: '目录内零件', covFluid: '油液（容量×密度算得）',
+    covOut: '没覆盖的', covOutList: '白车身数百个冲压钣金件与焊接总成（目录只取代表件）· 上万个紧固件卡扣线夹与密封胶 · 内饰细件与隔音材料',
+    covNote: '这两类不给数字，因为没有可靠依据可算——给了就是编。',
+    covKerb: '整备质量',
     cmpAdd: '加入对比', cmpDrop: '移出对比', cmpOpen: '对比 {n} 件', cmpClear: '清空',
     cmpTitle: '零件横向对比', cmpHint: '同一口径下并排看。加号从零件面板或树里点。',
     cmpFull: '最多同时对比 3 件',
@@ -97,6 +101,10 @@ const I18N = {
     scopeParts: 'Parts', scopeMass: 'Mass subtotal', scopeCost: 'Cost subtotal', scopeTime: 'Time subtotal',
     scopeBack: '← Back to vehicle', scopeHint: 'Subtotals for this group. Click a part in it for the part detail.',
     scopeHeaviest: 'Heaviest 5 in this group',
+    covTitle: 'How far the catalogue reaches', covIn: 'Parts in catalogue', covFluid: 'Fluids (capacity x density)',
+    covOut: 'Not covered', covOutList: 'Several hundred body-in-white stampings and welded assemblies (the catalogue keeps representatives only) · tens of thousands of fasteners, clips and sealers · interior detail parts and sound deadening',
+    covNote: 'No figure is given for those two, because there is no sound basis to compute one. Inventing it would be fabrication.',
+    covKerb: 'Kerb mass',
     cmpAdd: 'Add to compare', cmpDrop: 'Remove', cmpOpen: 'Compare {n}', cmpClear: 'Clear',
     cmpTitle: 'Part comparison', cmpHint: 'Side by side on the same basis. Add from a part panel or the tree.',
     cmpFull: 'Up to 3 parts at a time',
@@ -504,6 +512,32 @@ function renderAggregate() {
   h += `<p class="p-alt">${esc(L.aggHint)}</p>`;
   h += `<div class="agg-total mono">${esc(L.aggTotal)} <b>${esc(fmtMass(a.total))}</b></div>`;
   h += `<p class="agg-note">${esc(L.aggCurb.replace('{n}', ((S.data && S.data.parts) || []).length))}</p>`;
+
+  // 覆盖分解：把「37%」拆成看得懂的三段，而不是甩一个百分比让人发懵
+  {
+    const fl = (S.data && S.data.vehicle && S.data.vehicle.fluids) || [];
+    const flKg = fl.reduce((x, f) => x + (f.kg || 0), 0) * 1000;
+    const kerb = 1357000;   // E210 整备质量区间 1310–1405 kg 的中值
+    const seg = [[L.covIn, a.total, '#3f6b4a'], [L.covFluid, flKg, '#2f6b8f'],
+                 [L.covOut, Math.max(0, kerb - a.total - flKg), '#b8bcc0']];
+    h += `<div class="p-sec"><h4>${esc(L.covTitle)}</h4>`;
+    for (const [lb, v, c] of seg) {
+      const pct = (v / kerb) * 100;
+      h += `<div class="agg-row"><span class="agg-lb">${esc(lb)}</span>`
+        + `<span class="agg-bar"><i style="width:${Math.max(1.5, pct).toFixed(1)}%;background:${c}"></i></span>`
+        + `<span class="agg-val mono">${esc(fmtMass(v))} · ${pct.toFixed(0)}%</span></div>`;
+    }
+    h += `<p class="agg-note">${esc(L.covKerb)} 1310–1405 kg。${esc(L.covOut)}：${esc(L.covOutList)}。${esc(L.covNote)}</p>`;
+    if (fl.length) {
+      h += `<div class="chips">`;
+      for (const f of fl) {
+        h += `<span class="chip flat">${esc(S.lang === 'zh' ? f.name_zh : f.name_en)}`
+          + ` <b class="mono">${esc(fmtMass(f.kg * 1000))}</b></span>`;
+      }
+      h += `</div>`;
+    }
+    h += `</div>`;
+  }
 
   const gmax = a.byGroup[0][1];
   h += `<div class="p-sec"><h4>${esc(L.aggMass)}</h4>`;

@@ -33,7 +33,59 @@
   },
   "counts_note": "官方四大部分实测图组数：Body 42 / Electrical 36 / Engine-Fuel-Tool 26 / PowerTrain-Chassis 29，合计 133",
   "weight_note": "零件重量为按品类的工程经验值（weight_basis=category_typical），不是丰田官方数据，也不是从 3D 几何算出来的——这套 3D 是示意模型不是数模。整车合计仅用于量级自检。",
-  "cost_note": "成本为参数化估算模型：单件成本 = 重量kg × (材料单价 + 该工艺加工费率) + 紧固件数 × 0.6 元。系数表在 tools/enrich_parts.py 里，可查可改可复算。这不是丰田的采购价，公开渠道也拿不到那个数，只能当量级参考。"
+  "cost_note": "成本为参数化估算模型：单件成本 = 重量kg × (材料单价 + 该工艺加工费率) + 紧固件数 × 0.6 元。系数表在 tools/enrich_parts.py 里，可查可改可复算。这不是丰田的采购价，公开渠道也拿不到那个数，只能当量级参考。",
+  "fluids": [
+   {
+    "name_zh": "燃油（油箱加满）",
+    "name_en": "Fuel (tank full)",
+    "litre": 50.0,
+    "density": 0.745,
+    "kg": 37.25
+   },
+   {
+    "name_zh": "发动机机油",
+    "name_en": "Engine oil",
+    "litre": 4.2,
+    "density": 0.86,
+    "kg": 3.61
+   },
+   {
+    "name_zh": "冷却液",
+    "name_en": "Coolant",
+    "litre": 6.0,
+    "density": 1.07,
+    "kg": 6.42
+   },
+   {
+    "name_zh": "CVT 变速箱油",
+    "name_en": "CVT fluid",
+    "litre": 7.0,
+    "density": 0.85,
+    "kg": 5.95
+   },
+   {
+    "name_zh": "制动液",
+    "name_en": "Brake fluid",
+    "litre": 0.9,
+    "density": 1.04,
+    "kg": 0.94
+   },
+   {
+    "name_zh": "风窗洗涤液",
+    "name_en": "Washer fluid",
+    "litre": 4.5,
+    "density": 1.0,
+    "kg": 4.5
+   },
+   {
+    "name_zh": "空调冷媒 R1234yf",
+    "name_en": "A/C refrigerant R1234yf",
+    "litre": 0.42,
+    "density": 1.1,
+    "kg": 0.46
+   }
+  ],
+  "coverage_note": "目录覆盖率 = 目录内叶子件质量合计 ÷ 整备质量。没覆盖的三类：① 白车身的数百个冲压钣金件与焊接总成（目录只取代表件）；② 上万个紧固件、卡扣、线夹与密封胶；③ 油液。油液按公开加注容量 × 密度算得，逐项列在 vehicle.fluids 里可复算；前两类不给数，因为没有可靠依据。"
  },
  "parts": [
   {
