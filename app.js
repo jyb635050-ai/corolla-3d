@@ -42,6 +42,11 @@ const I18N = {
     covNote: '这两类不给数字，因为没有可靠依据可算——给了就是编。',
     covKerb: '整备质量',
     pathTitle: '拆到它要先拆什么', pathTotal: '累计工时', pathSelf: '本件',
+    vsBtn: '整车对标', vsTitle: '整车对标', vsSlotTitle: '第二台车',
+    vsSlotHint: '对标要两台车的数据。本站只有卡罗拉一台——把另一台车按同样的字段格式做成 data/parts.json 放进 data/vehicles/ 下，这一栏就会填上。缺的是数据，不是功能。',
+    vsRows: { parts: '目录零件数', mesh: '建 3D 的', mass: '目录内质量', kerb: '整备质量',
+              cost: '成本估算', time: '可拆件工时', fast: '紧固件总数', weld: '焊点数',
+              removable: '可无损拆卸件', destructive: '焊死件', subgroups: '官方图组数' },
     pathNote: '按装配树自外向内排，已剔除整车根节点与焊死的结构件（它们挡路但不会被拆下）。这是可达性顺序，不是丰田维修手册的工序 —— 手册里还有放油、断电、举升这些步骤，本站没有。',
     cmpAdd: '加入对比', cmpDrop: '移出对比', cmpOpen: '对比 {n} 件', cmpClear: '清空',
     cmpTitle: '零件横向对比', cmpHint: '同一口径下并排看。加号从零件面板或树里点。',
@@ -108,6 +113,11 @@ const I18N = {
     covNote: 'No figure is given for those two, because there is no sound basis to compute one. Inventing it would be fabrication.',
     covKerb: 'Kerb mass',
     pathTitle: 'What must come off first', pathTotal: 'Cumulative time', pathSelf: 'this part',
+    vsBtn: 'Vehicle benchmark', vsTitle: 'Vehicle benchmark', vsSlotTitle: 'Second vehicle',
+    vsSlotHint: 'Benchmarking needs two vehicles. This site holds only the Corolla. Build a second vehicle as a data/parts.json in the same frozen field format, drop it under data/vehicles/, and this column fills in. What is missing is the data, not the capability.',
+    vsRows: { parts: 'Parts in catalogue', mesh: 'With 3D mesh', mass: 'Catalogued mass', kerb: 'Kerb mass',
+              cost: 'Cost estimate', time: 'Removal time', fast: 'Fasteners total', weld: 'Spot welds',
+              removable: 'Removable parts', destructive: 'Welded parts', subgroups: 'Diagram groups' },
     pathNote: 'Ordered outside-in from the assembly tree, with the vehicle root and welded structure removed from the list (they obstruct access but are never taken off). This is an access order, not the workshop-manual procedure — the manual also covers draining, disconnecting the battery and lifting, none of which are modelled here.',
     cmpAdd: 'Add to compare', cmpDrop: 'Remove', cmpOpen: 'Compare {n}', cmpClear: 'Clear',
     cmpTitle: 'Part comparison', cmpHint: 'Side by side on the same basis. Add from a part panel or the tree.',
@@ -200,7 +210,9 @@ const S = {
   selected: null,
   scope: null,
   compare: [],       // 横向对比的零件 id，最多 3 个
-  compareOpen: false,      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
+  compareOpen: false,
+  vsOpen: false,
+  vehicles: [],      // 对标用：每台车一份同格式的 doc，现在只有卡罗拉      // {group} 或 {group, subgroup}：树里点了某一组时的钻取范围
   anim: null,
   camAnim: null,
   frames: [],
@@ -735,6 +747,63 @@ function bindCompare(root) {
   });
 }
 
+// 整车级画像：对标的一列。抽成函数，将来多一台车就是多调一次。
+function vehicleProfile(doc) {
+  const parts = (doc && doc.parts) || [];
+  const byid = new Map(parts.map((p) => [p.id, p]));
+  const hasKid = new Set(parts.filter((p) => byid.has(p.parent)).map((p) => p.parent));
+  let mass = 0, cost = 0, time = 0, fast = 0, weld = 0, rem = 0, des = 0;
+  const sg = new Set();
+  for (const p of parts) {
+    sg.add(p.subgroup_en || p.subgroup_zh || '');
+    if (hasKid.has(p.id)) continue;
+    const q = p.qty || 1;
+    mass += (p.weight_g || 0) * q;
+    cost += (p.cost_cny || 0) * q;
+    for (const f of p.fastening || []) {
+      const n = (f.count || 0) * q;
+      if (f.type === 'weld_spot' || f.type === 'weld_seam') weld += n; else fast += n;
+    }
+    if (p.disassembly_kind === 'destructive') des++;
+    else { rem++; time += p.disassembly_min || 0; }
+  }
+  return {
+    name: (doc && doc.vehicle && (S.lang === 'zh' ? doc.vehicle.name_zh : doc.vehicle.name_en))
+      || (doc && doc.vehicle && doc.vehicle.name) || 'Corolla E210',
+    parts: parts.length, mesh: parts.filter((p) => p.has_mesh).length,
+    subgroups: sg.size, mass, cost, time, fast, weld, removable: rem, destructive: des,
+    kerb: (doc && doc.vehicle && doc.vehicle.kerb_kg) || '1310–1405 kg',
+  };
+}
+
+function renderVs() {
+  const L = t();
+  const cols = (S.vehicles || []).map(vehicleProfile);
+  if (!cols.length) return '';
+  const F = {
+    parts: (v) => v.parts, mesh: (v) => v.mesh, subgroups: (v) => v.subgroups,
+    mass: (v) => fmtMass(v.mass), kerb: (v) => v.kerb,
+    cost: (v) => '¥' + Math.round(v.cost).toLocaleString(),
+    time: (v) => (v.time / 60).toFixed(1) + ' h',
+    fast: (v) => v.fast, weld: (v) => v.weld,
+    removable: (v) => v.removable, destructive: (v) => v.destructive,
+  };
+  let h = `<div class="agg">`;
+  h += `<button type="button" class="pill mini" id="vsBack">${esc(L.scopeBack)}</button>`;
+  h += `<h2 class="p-name">${esc(L.vsTitle)}</h2>`;
+  h += `<div class="cmp-wrap"><table class="cmp"><thead><tr><th></th>`;
+  for (const v of cols) h += `<th>${esc(v.name)}</th>`;
+  h += `<th class="vs-slot">${esc(L.vsSlotTitle)}</th></tr></thead><tbody>`;
+  for (const k of ['parts', 'mesh', 'subgroups', 'mass', 'kerb', 'cost', 'time', 'fast', 'weld', 'removable', 'destructive']) {
+    h += `<tr><th>${esc(L.vsRows[k])}</th>`;
+    for (const v of cols) h += `<td class="mono">${esc(String(F[k](v)))}</td>`;
+    h += `<td class="mono vs-slot">—</td></tr>`;
+  }
+  h += `</tbody></table></div>`;
+  h += `<p class="agg-note">${esc(L.vsSlotHint)}</p></div>`;
+  return h;
+}
+
 function renderPanel() {
   const body = el('panelBody');
   const empty = el('panelEmpty');
@@ -743,12 +812,14 @@ function renderPanel() {
     // 没选中零件时，右栏给整车层面的汇总，而不是一句「还没有选中零件」。
     // 质量分布 / 材料构成 / 紧固件合计 —— 这是拆解基准工具真正的看点。
     body.hidden = true; empty.hidden = false; body.innerHTML = '';
-    empty.innerHTML = (S.compareOpen && S.compare.length >= 2)
+    empty.innerHTML = S.vsOpen ? renderVs() : (S.compareOpen && S.compare.length >= 2)
       ? renderCompare()
       : (S.scope ? renderScope() : renderAggregate()) + renderCompareTray();
     bindCompare(empty);
     const bk = el('scopeBack');
-    if (bk) bk.addEventListener('click', () => { S.scope = null; renderPanel(); });
+    if (bk) bk.addEventListener('click', () => { S.scope = null; S.vsOpen = false; renderPanel(); });
+    const vb = el('vsBack');
+    if (vb) vb.addEventListener('click', () => { S.vsOpen = false; renderPanel(); });
     empty.querySelectorAll('[data-goto]').forEach((n) => {
       n.style.cursor = 'pointer';
       n.addEventListener('click', () => selectPart(n.getAttribute('data-goto'), true));
@@ -1151,6 +1222,10 @@ function bindEvents() {
     (S.state === 'assembled' ? explode() : assemble());
   });
   el('btnReset').addEventListener('click', () => resetView(700));
+  el('btnVs').addEventListener('click', () => {
+    S.vsOpen = !S.vsOpen; S.selected = null; S.scope = null; S.compareOpen = false;
+    clearHighlight(); el('btnVs').classList.toggle('primary', S.vsOpen); renderPanel();
+  });
   bindTree();
   document.querySelectorAll('[data-lang-btn]').forEach((b) => {
     b.addEventListener('click', () => setLang(b.getAttribute('data-lang-btn')));
@@ -1242,6 +1317,7 @@ async function boot() {
   }
   if (issue) console.warn('[corolla] data/parts.json 不可用或不合冻结格式，已退回 stub：', issue);
 
+  S.vehicles = [doc];
   S.car = buildCar(doc.parts);
   S.car.ground = makeGroundShadow();
   S.car.ground.userData.want = 1;
@@ -1410,6 +1486,7 @@ const api = {
     return { parts: a.parts.length, mass_g: a.mass, cost_cny: Math.round(a.cost),
              disasm_min: Math.round(a.time * 10) / 10, removable: a.removable, destructive: a.destructive };
   },
+  vehicleProfile: () => (S.vehicles || []).map(vehicleProfile),
   exportBOM,
   resetView,
   CAR,
