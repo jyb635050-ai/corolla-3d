@@ -41,6 +41,8 @@ const I18N = {
     covOut: '没覆盖的', covOutList: '白车身数百个冲压钣金件与焊接总成（目录只取代表件）· 上万个紧固件卡扣线夹与密封胶 · 内饰细件与隔音材料',
     covNote: '这两类不给数字，因为没有可靠依据可算——给了就是编。',
     covKerb: '整备质量',
+    pathTitle: '拆到它要先拆什么', pathTotal: '累计工时', pathSelf: '本件',
+    pathNote: '按装配树自外向内排，已剔除整车根节点与焊死的结构件（它们挡路但不会被拆下）。这是可达性顺序，不是丰田维修手册的工序 —— 手册里还有放油、断电、举升这些步骤，本站没有。',
     cmpAdd: '加入对比', cmpDrop: '移出对比', cmpOpen: '对比 {n} 件', cmpClear: '清空',
     cmpTitle: '零件横向对比', cmpHint: '同一口径下并排看。加号从零件面板或树里点。',
     cmpFull: '最多同时对比 3 件',
@@ -105,6 +107,8 @@ const I18N = {
     covOut: 'Not covered', covOutList: 'Several hundred body-in-white stampings and welded assemblies (the catalogue keeps representatives only) · tens of thousands of fasteners, clips and sealers · interior detail parts and sound deadening',
     covNote: 'No figure is given for those two, because there is no sound basis to compute one. Inventing it would be fabrication.',
     covKerb: 'Kerb mass',
+    pathTitle: 'What must come off first', pathTotal: 'Cumulative time', pathSelf: 'this part',
+    pathNote: 'Ordered outside-in from the assembly tree, with the vehicle root and welded structure removed from the list (they obstruct access but are never taken off). This is an access order, not the workshop-manual procedure — the manual also covers draining, disconnecting the battery and lifting, none of which are modelled here.',
     cmpAdd: 'Add to compare', cmpDrop: 'Remove', cmpOpen: 'Compare {n}', cmpClear: 'Clear',
     cmpTitle: 'Part comparison', cmpHint: 'Side by side on the same basis. Add from a part panel or the tree.',
     cmpFull: 'Up to 3 parts at a time',
@@ -811,6 +815,38 @@ function renderPanel() {
     h += `</div></div>`;
   }
 
+  {
+    // 拆解路径：沿装配树往上走，列出必须先拆掉的层，并累计工时。
+    // 只用已有的 parent 链和 disassembly_min 推，不另编数据。
+    // 祖先链里只保留「真的要先拆掉」的件：整车根节点不算（拆雨刮片不用拆白车身），
+    // 焊死的结构件也不算（它挡路但你不会去拆它，只会绕开）。这两类留在链里就是胡说。
+    const chain = [];
+    let cur = p.parent, guard = 0;
+    while (cur && S.byId.has(cur) && guard++ < 12) {
+      const a = S.byId.get(cur);
+      const isRoot = !a.parent || !S.byId.has(a.parent);
+      if (!isRoot && a.disassembly_kind !== 'destructive') chain.push(a);
+      cur = a.parent;
+    }
+    chain.reverse();
+    if (chain.length) {
+      let acc = 0;
+      h += `<div class="p-sec"><h4>${esc(L.pathTitle)}</h4><ol class="path">`;
+      for (const c of chain) {
+        const m = c.disassembly_kind === 'destructive' ? 0 : (c.disassembly_min || 0);
+        acc += m;
+        h += `<li><span class="path-n" data-goto="${esc(c.id)}">${esc(partName(c).main)}</span>`
+          + `<span class="path-t mono">${c.disassembly_kind === 'destructive'
+              ? esc(L.disasmKind.destructive) : m.toFixed(1) + ' min'}</span></li>`;
+      }
+      const self = p.disassembly_kind === 'destructive' ? 0 : (p.disassembly_min || 0);
+      acc += self;
+      h += `<li class="path-self"><span class="path-n">${esc(L.pathSelf)}</span>`
+        + `<span class="path-t mono">${self.toFixed(1)} min</span></li>`;
+      h += `</ol><div class="agg-total mono">${esc(L.pathTotal)} <b>${acc.toFixed(1)} min</b></div>`;
+      h += `<p class="agg-note">${esc(L.pathNote)}</p></div>`;
+    }
+  }
   {
     const inCmp = S.compare.includes(p.id);
     h += `<div class="p-sec"><button type="button" class="pill mini${inCmp ? '' : ' primary'}" `

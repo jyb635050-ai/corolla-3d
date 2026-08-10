@@ -333,3 +333,14 @@ table.cmp td { font-size: 11.5px; }
 .cmp-x:hover { opacity: 1; }
 .cmp-tray { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
   margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(128,128,128,.16); }
+
+/* 拆解路径 */
+ol.path { list-style: none; margin: 8px 0; padding: 0; counter-reset: pstep; }
+ol.path li { display: flex; align-items: baseline; gap: 8px; padding: 4px 0 4px 22px;
+  position: relative; font-size: 12px; border-left: 2px solid rgba(128,128,128,.20); margin-left: 6px; }
+ol.path li::before { counter-increment: pstep; content: counter(pstep);
+  position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(128,128,128,.18); font-size: 9px; line-height: 16px; text-align: center; }
+ol.path li.path-self::before { content: '●'; font-size: 8px; background: #3f6b4a; color: #fff; }
+.path-n { flex: 1; cursor: pointer; }
+.path-t { font-size: 10.5px; opacity: .6; white-space: nowrap; }
